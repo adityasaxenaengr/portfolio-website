@@ -1688,6 +1688,7 @@ body.cursor-hover .cursor-outline {
     max-width: 100vw !important;
     width: 100% !important;
     position: relative;
+    scroll-behavior: smooth;
   }
 
   .ambient-glow {
@@ -1701,8 +1702,34 @@ body.cursor-hover .cursor-outline {
     font-size: 0.76rem;
   }
 
+  /* Clean Mobile Section Boundaries & Alternating Contrast */
   .section {
-    padding: 48px 0;
+    padding: 52px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .section:nth-child(even) {
+    background: rgba(30, 41, 59, 0.35);
+  }
+
+  .section-header {
+    margin-bottom: 28px;
+    text-align: left;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .section-tag {
+    font-size: 0.8rem;
+    font-family: var(--font-code);
+    color: var(--accent-cyan);
+    margin-bottom: 4px;
+    display: inline-block;
   }
 
   .section-container, .nav-container, .footer-container {
