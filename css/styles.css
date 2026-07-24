@@ -1069,11 +1069,51 @@ body.cursor-hover .cursor-outline {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 20px;
+  left: 10px;
   top: 0;
   bottom: 0;
   width: 3px;
-  background: var(--border-color);
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-cyan), var(--accent-secondary), var(--accent-primary));
+  background-size: 100% 200%;
+  animation: moveLineGlow 3s linear infinite;
+}
+
+@keyframes moveLineGlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 200%; }
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 15px var(--accent-cyan), 0 0 30px var(--accent-primary);
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  animation: travelLaserDot 4s ease-in-out infinite alternate;
+}
+
+@keyframes travelLaserDot {
+  0% {
+    top: 0%;
+    background: var(--accent-cyan);
+    box-shadow: 0 0 15px var(--accent-cyan), 0 0 30px var(--accent-primary);
+  }
+  50% {
+    top: 50%;
+    background: var(--accent-secondary);
+    box-shadow: 0 0 20px var(--accent-secondary), 0 0 35px var(--accent-cyan);
+  }
+  100% {
+    top: 100%;
+    background: var(--accent-emerald);
+    box-shadow: 0 0 15px var(--accent-emerald), 0 0 30px var(--accent-secondary);
+  }
 }
 
 .timeline-item {
@@ -1085,13 +1125,13 @@ body.cursor-hover .cursor-outline {
 .timeline-dot {
   position: absolute;
   left: 10px;
-  top: 6px;
-  width: 22px;
-  height: 22px;
+  top: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: var(--bg-primary);
   border: 3px solid var(--accent-primary);
-  box-shadow: 0 0 10px var(--accent-primary);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
   transform: translateX(-50%);
   z-index: 2;
 }
