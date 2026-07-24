@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
   profile: {
     name: "Aditya Saxena",
     title: "Full-Stack Developer & Software Engineer",
-    tagline: "B.Tech Computer Science student passionate about Full-Stack Web Development, Python, and Java.",
+    tagline: "B.Tech Computer Science student passionate about Full-Stack Web Development, Python, and Java. 🚀",
     location: "Bareilly, Uttar Pradesh, India",
     email: "adityasaxena.engr@gmail.com",
     github: "https://github.com/adityasaxenaengr",
