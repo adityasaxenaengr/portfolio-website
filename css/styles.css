@@ -669,16 +669,27 @@ body.cursor-hover .cursor-outline {
   to { transform: rotate(360deg); }
 }
 
-.avatar-fallback {
+.avatar-fallback, .profile-developer-icon-badge {
   position: relative;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: var(--bg-secondary);
+  background: var(--gradient-main);
+  border: 3px solid rgba(255, 255, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+}
+
+.profile-developer-icon-badge svg, .profile-developer-icon-badge i {
+  width: 44px;
+  height: 44px;
+  stroke-width: 2.2px;
+  stroke: #ffffff !important;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
 .profile-avatar-img {
