@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Saxena . Portfolio</title>
+  <meta name="description" content="Personal Portfolio Website of Aditya Saxena featuring web applications, Python tools, and Java software projects.">
+  <meta name="keywords" content="Aditya Saxena, Developer Portfolio, Web Development, Python, Java, B.Tech CSE">
+  <meta name="author" content="Aditya Saxena">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Aditya Saxena . Portfolio">
+  <meta property="og:description" content="Building scalable web platforms, modern user experiences, and intelligent AI solutions.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Ambient Background Glow & Grid -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+  <div class="bg-grid-overlay"></div>
+  
+  <!-- Custom Cursor Follower -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Aditya.Dev</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="terminalToggleBtn" title="Launch Terminal CLI" aria-label="Terminal CLI">
+          <i data-lucide="terminal"></i>
+        </button>
+
+        <button class="icon-btn" id="resumeToggleBtn" title="View Resume" aria-label="View Resume">
+          <i data-lucide="file-text"></i>
+        </button>
+        
+        <button class="icon-btn" id="soundToggleBtn" title="Toggle Sound SFX" aria-label="Toggle Sound">
+          <i data-lucide="volume-2" id="soundIcon"></i>
+        </button>
+
+        <button class="icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <i data-lucide="sun" id="themeIcon"></i>
+        </button>
+
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Open Menu">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for New Projects & Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Aditya Saxena</span>
+          </h1>
+
+          <div class="hero-subtitle-container">
+            <span class="prefix">I build</span>
+            <span class="typing-text" id="typingText"></span>
+            <span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate Full-Stack Developer & Software Engineer specializing in modern Web Development, Python, and Java. Building clean responsive web apps and robust software solutions.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            
+            <a href="#contact" class="btn btn-secondary">
+              <i data-lucide="mail"></i>
+              <span>Get In Touch</span>
+            </a>
+
+            <button class="btn btn-outline" id="heroResumeBtn">
+              <i data-lucide="download"></i>
+              <span>Resume</span>
+            </button>
+          </div>
+
+          <div class="hero-socials">
+            <span class="social-label">Connect with me:</span>
+            <div class="social-links">
+              <a href="https://github.com/adityasaxenaengr" target="_blank" rel="noopener" class="social-btn" title="GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/adityasaxenaengr" target="_blank" rel="noopener" class="social-btn" title="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adityasaxena.engr@gmail.com&su=Portfolio%20Inquiry%20for%20Aditya%20Saxena" target="_blank" rel="noopener" class="social-btn hero-email-btn" id="heroEmailBtn" title="Send Direct Email via Gmail to adityasaxena.engr@gmail.com" data-copy="adityasaxena.engr@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="glass-card profile-card">
+            <div class="card-header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+              <span class="card-title-tab">profile.config.ts</span>
+            </div>
+
+            <div class="profile-avatar-wrapper">
+              <div class="avatar-ring"></div>
+              <img src="images/aditya-profile.jpg" alt="Aditya Saxena" class="profile-avatar-img" style="position: relative; z-index: 2; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: 50% 25%; border: 2px solid var(--accent-primary); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); display: block;">
+            </div>
+
+            <div class="code-snippet-body">
+              <pre><code><span class="code-keyword">const</span> <span class="code-var">developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-str">'Aditya Saxena'</span>,
+  <span class="code-prop">degree</span>: <span class="code-str">'B.Tech CSE'</span>,
+  <span class="code-prop">location</span>: <span class="code-str">'Bareilly, UP, India'</span>,
+  <span class="code-prop">stack</span>: [<span class="code-str">'HTML/CSS'</span>, <span class="code-str">'JS'</span>, <span class="code-str">'Python'</span>, <span class="code-str">'Java'</span>],
+  <span class="code-prop">project1</span>: <span class="code-str">'Portfolio Website'</span>
+};</code></pre>
+            </div>
+
+            <div class="card-footer-stats">
+              <div class="mini-stat">
+                <span class="stat-icon">⚡</span>
+                <div>
+                  <div class="mini-stat-val">100%</div>
+                  <div class="mini-stat-lbl">Dedication</div>
+                </div>
+              </div>
+              <div class="mini-stat">
+                <span class="stat-icon">🚀</span>
+                <div>
+                  <div class="mini-stat-val">4</div>
+                  <div class="mini-stat-lbl">Featured Projects</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">&lt;01. About Me&gt;</span>
+          <h2 class="section-title">Passionate Software Developer</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text-content">
+            <h3 class="about-heading">Crafting Web Applications & Software Solutions</h3>
+            <p>
+              I am a B.Tech Computer Science & Engineering (CSE) student from Bareilly, Uttar Pradesh. I am passionate about Full-Stack Web Development, Python, and Java programming.
+            </p>
+            <p>
+              This Portfolio Website is my very first official milestone project! I am dedicated to continuously writing clean code, solving algorithmic challenges, and building real-world projects.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i data-lucide="check-circle-2" class="highlight-icon"></i>
+                <div>
+                  <h4>Full-Stack Web Development</h4>
+                  <p>Building responsive layouts, dynamic DOM interactions, and backend APIs.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="terminal" class="highlight-icon"></i>
+                <div>
+                  <h4>Python & Scripting</h4>
+                  <p>Developing data structures, automation scripts, and logic-driven algorithms.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="coffee" class="highlight-icon"></i>
+                <div>
+                  <h4>Java & OOP Principles</h4>
+                  <p>Writing modular, object-oriented code with clean class hierarchies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-grid">
+            <div class="stat-card glass-card">
+              <div class="stat-number-wrapper">
+                <span class="stat-number" id="statYears">0</span>
+                <span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Years of Corporate Exp</span>
+              <p class="stat-desc">Fresher / Eager to Learn & Build</p>
+            </div>
+
+            <div class="stat-card glass-card">
+              <div class="stat-number-wrapper">
+                <span class="stat-number" id="statProjects">4</span>
+              </div>
+              <span class="stat-label">Projects Roadmap</span>
+              <p class="stat-desc">Portfolio #1 + 3 Upcoming Apps</p>
+            </div>
+
+            <div class="stat-card glass-card" data-count="12">
+              <div class="stat-number-wrapper">
+                <span class="stat-number" id="statAwards">1</span>
+              </div>
+              <span class="stat-label">Milestone Projects</span>
+              <p class="stat-desc">Personal Developer Portfolio</p>
+            </div>
+
+            <div class="stat-card glass-card" data-count="100">
+              <div class="stat-number-wrapper">
+                <span class="stat-number" id="statSatisfaction">100</span>
+                <span class="stat-plus">%</span>
+              </div>
+              <span class="stat-label">Learning Commitment</span>
+              <p class="stat-desc">Focused on software engineering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">&lt;02. Tech Stack & Skills&gt;</span>
+          <h2 class="section-title">My Technical Ecosystem</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <!-- Skills Filter Controls -->
+        <div class="filter-bar">
+          <div class="filter-tabs" id="skillsFilterTabs">
+            <button class="filter-tab active" data-category="all">All Skills</button>
+            <button class="filter-tab" data-category="frontend">Frontend</button>
+            <button class="filter-tab" data-category="backend">Backend & DB</button>
+            <button class="filter-tab" data-category="ai">AI & ML</button>
+            <button class="filter-tab" data-category="devops">DevOps & Tools</button>
+          </div>
+
+          <div class="search-box">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="skillsSearchInput" placeholder="Search skills (e.g. React, Python, Java)..." aria-label="Search skills">
+          </div>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Populated dynamically via skills.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">&lt;03. Featured Work&gt;</span>
+          <h2 class="section-title">Highlighted Projects</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <!-- Project Category Filters & Search -->
+        <div class="filter-bar">
+          <div class="filter-tabs" id="projectsFilterTabs">
+            <button class="filter-tab active" data-category="all">All Projects</button>
+            <button class="filter-tab" data-category="web">Web Apps</button>
+            <button class="filter-tab" data-category="fullstack">Full-Stack</button>
+            <button class="filter-tab" data-category="backend">Java & Python</button>
+          </div>
+
+          <div class="search-box">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" id="projectsSearchInput" placeholder="Search projects by tech or title..." aria-label="Search projects">
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Populated dynamically via projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">&lt;04. Education & Journey&gt;</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <div class="timeline" id="experienceTimeline">
+          <!-- Populated dynamically via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">&lt;05. Recommendations&gt;</span>
+          <h2 class="section-title">What Mentors & Peers Say</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <div class="testimonial-carousel-wrapper">
+          <button class="carousel-nav-btn prev" id="testimonialPrevBtn" aria-label="Previous Testimonial">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          
+          <div class="testimonial-track-container">
+            <div class="testimonial-track" id="testimonialTrack">
+              <!-- Populated dynamically via testimonials.js -->
+            </div>
+          </div>
+
+          <button class="carousel-nav-btn next" id="testimonialNextBtn" aria-label="Next Testimonial">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="carousel-dots" id="testimonialDots"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-tag">&lt;06. Get In Touch&gt;</span>
+          <h2 class="section-title">Let's Build Something Great Together</h2>
+          <div class="section-title-line"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-card glass-card">
+            <h3>Contact Information</h3>
+            <p>Have an exciting project idea, open role, or technical question? Feel free to send a message or reach out through social channels.</p>
+
+            <div class="contact-methods">
+              <div class="contact-item" id="copyEmailItem">
+                <div class="contact-icon-wrapper">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="contact-detail">
+                  <span class="contact-lbl">Direct Email</span>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adityasaxena.engr@gmail.com&su=Portfolio%20Inquiry%20for%20Aditya%20Saxena" target="_blank" rel="noopener" class="contact-val" style="color: var(--accent-cyan); text-decoration: underline;">adityasaxena.engr@gmail.com</a>
+                </div>
+                <button class="copy-btn" title="Copy Email" data-copy="adityasaxena.engr@gmail.com">
+                  <i data-lucide="copy"></i>
+                </button>
+              </div>
+
+
+              <div class="contact-item">
+                <div class="contact-icon-wrapper">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="contact-detail">
+                  <span class="contact-lbl">Location</span>
+                  <span class="contact-val">Bareilly, Uttar Pradesh, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="availability-box">
+              <i data-lucide="clock" class="avail-icon"></i>
+              <div>
+                <strong>Current Availability:</strong>
+                <p>Accepting new contract work, consulting & full-time senior roles.</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <h3 class="form-title">Send a Message</h3>
+            
+            <div class="form-group">
+              <label for="senderName">Your Name <span class="req">*</span></label>
+              <input type="text" id="senderName" name="name" placeholder="John Doe" required>
+              <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail">Your Email <span class="req">*</span></label>
+              <input type="email" id="senderEmail" name="email" placeholder="john@example.com" required>
+              <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="msgSubject">Subject</label>
+              <input type="text" id="msgSubject" name="subject" placeholder="Project Inquiry / Job Opportunity">
+            </div>
+
+            <div class="form-group">
+              <label for="msgBody">Message <span class="req">*</span></label>
+              <textarea id="msgBody" name="message" rows="5" placeholder="Hi Aditya, I would love to discuss a project..." required></textarea>
+              <span class="error-msg" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn" id="submitFormBtn">
+              <span>Send Message</span>
+              <i data-lucide="send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="footer-logo">Aditya Saxena</a>
+        <p>© <span id="currentYear">2026</span> Aditya Saxena. Designed & Built with precision and passion.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="social-links">
+          <a href="https://github.com/adityasaxenaengr" target="_blank" rel="noopener" class="social-btn" title="GitHub Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/adityasaxenaengr" target="_blank" rel="noopener" class="social-btn" title="LinkedIn Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adityasaxena.engr@gmail.com&su=Portfolio%20Inquiry%20for%20Aditya%20Saxena" target="_blank" rel="noopener" class="social-btn" title="Send Direct Email to adityasaxena.engr@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+          </a>
+        </div>
+
+        <a href="#hero" class="back-to-top" id="backToTopBtn" title="Back to top" aria-label="Back to top">
+          <i data-lucide="arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODALS -->
+
+  <!-- Project Detail Modal -->
+  <div class="modal-backdrop" id="projectModalBackdrop">
+    <div class="modal-content glass-card" id="projectModal">
+      <button class="modal-close-btn" id="closeProjectModalBtn" aria-label="Close modal">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="modal-body" id="projectModalBody">
+        <!-- Content inserted dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Terminal CLI Modal -->
+  <div class="modal-backdrop" id="terminalModalBackdrop">
+    <div class="terminal-container glass-card" id="terminalModal">
+      <div class="terminal-header">
+        <div class="terminal-controls">
+          <span class="control-btn close" id="closeTerminalBtn"></span>
+          <span class="control-btn minimize"></span>
+          <span class="control-btn maximize"></span>
+        </div>
+        <div class="terminal-title">aditya@saxena-portfolio-cli:~</div>
+      </div>
+
+      <div class="terminal-body" id="terminalBody">
+        <div class="terminal-welcome">
+          Welcome to Aditya Saxena Interactive CLI v2.4.0<br>
+          Type <span class="term-highlight">'help'</span> to see available commands or <span class="term-highlight">'projects'</span> to view work.
+        </div>
+        <div class="terminal-output" id="terminalOutput"></div>
+        <div class="terminal-input-line">
+          <span class="term-prompt">aditya@dev:~$</span>
+          <input type="text" id="terminalInput" autofocus autocomplete="off" spellcheck="false" aria-label="Terminal command input">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Modal -->
+  <div class="modal-backdrop" id="resumeModalBackdrop">
+    <div class="modal-content glass-card resume-modal-content" id="resumeModal">
+      <div class="resume-modal-header">
+        <h2>Curriculum Vitae — Aditya Saxena</h2>
+        <div class="resume-actions">
+          <button class="btn btn-secondary" id="printResumeBtn">
+            <i data-lucide="printer"></i>
+            <span>Print</span>
+          </button>
+          <button class="btn btn-primary" id="downloadResumeBtn">
+            <i data-lucide="download"></i>
+            <span>Download PDF</span>
+          </button>
+          <button class="modal-close-btn" id="closeResumeModalBtn" aria-label="Close modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="resume-modal-body" id="resumeModalBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/projectModal.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/resume.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
