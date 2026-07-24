@@ -1865,8 +1865,30 @@ body.cursor-hover .cursor-outline {
     scroll-behavior: smooth;
   }
 
+  /* Mobile-Optimized Ambient Background Glows */
   .ambient-glow {
-    display: none !important;
+    display: block !important;
+    width: 250px !important;
+    height: 250px !important;
+    filter: blur(70px) !important;
+    opacity: 0.45 !important;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .glow-1 {
+    top: 40px !important;
+    left: -60px !important;
+  }
+
+  .glow-2 {
+    top: 35% !important;
+    right: -60px !important;
+  }
+
+  .glow-3 {
+    bottom: 10% !important;
+    left: 10% !important;
   }
 
   .code-snippet-body pre, .code-snippet-body code {
