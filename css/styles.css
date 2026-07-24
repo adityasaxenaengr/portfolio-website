@@ -1682,7 +1682,61 @@ body.cursor-hover .cursor-outline {
   }
 }
 
+/* Mobile Section Tab Bar: Hidden on PC, Sticky Glass Bar on Mobile */
+.mobile-section-nav-bar {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  .mobile-section-nav-bar {
+    display: block;
+    position: sticky;
+    top: var(--nav-height);
+    z-index: 1200;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 8px 12px;
+    width: 100%;
+  }
+
+  .mobile-nav-scroll-container {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .mobile-nav-scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-nav-tab {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+
+  .mobile-nav-tab.active, .mobile-nav-tab:hover {
+    background: var(--gradient-main);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
+  }
+
   html, body, main {
     overflow-x: hidden !important;
     max-width: 100vw !important;
@@ -1911,19 +1965,30 @@ body.cursor-hover .cursor-outline {
     min-width: 0;
   }
 
-  /* Skills Grid Mobile */
+  /* Horizontal Swipable Mobile Skill & Project Carousels */
   .skills-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
     gap: 12px;
+    padding-bottom: 14px;
+    scrollbar-width: none;
     width: 100%;
   }
 
+  .skills-grid::-webkit-scrollbar {
+    display: none;
+  }
+
   .skill-card {
+    flex: 0 0 76%;
+    scroll-snap-align: center;
     padding: 14px 16px;
     display: flex;
     align-items: center;
     gap: 14px;
-    width: 100%;
     border-radius: var(--radius-md);
     box-sizing: border-box;
     background: var(--bg-card);
@@ -1935,16 +2000,27 @@ body.cursor-hover .cursor-outline {
     font-weight: 600;
   }
 
-  /* Projects Grid Mobile */
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding-bottom: 14px;
+    scrollbar-width: none;
     width: 100%;
   }
 
+  .projects-grid::-webkit-scrollbar {
+    display: none;
+  }
+
   .project-card {
-    width: 100%;
-    max-width: 100%;
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+    width: 88%;
+    max-width: 88%;
     border-radius: var(--radius-md);
     box-sizing: border-box;
     background: var(--bg-card);
