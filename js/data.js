@@ -166,8 +166,8 @@ window.PORTFOLIO_DATA = {
       title: "Responsive Web Design Certification",
       issuer: "freeCodeCamp",
       issuerLogo: "💻",
-      date: "2024",
-      credId: "FCC-RWD-9923-B11",
+      date: "2025",
+      credId: "FCC-RWD-2025-B11",
       skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
       verified: true,
       description: "Comprehensive certification covering HTML5 semantic structure, CSS3 Flexbox/Grid layouts, typography, and responsive web design."
@@ -177,8 +177,8 @@ window.PORTFOLIO_DATA = {
       title: "Problem Solving (Basic) Certificate",
       issuer: "HackerRank",
       issuerLogo: "🧩",
-      date: "2024",
-      credId: "HR-PS-7712-C44",
+      date: "2026",
+      credId: "HR-PS-2026-C44",
       skills: ["Data Structures", "Algorithms", "Array/String", "Logic"],
       verified: true,
       description: "Validates core problem-solving capability, data structure manipulation, and algorithmic efficiency."
