@@ -2443,3 +2443,17 @@ body.cursor-hover .cursor-outline {
   box-shadow: 0 12px 30px rgba(99, 102, 241, 0.2);
   border-color: rgba(99, 102, 241, 0.4);
 }
+
+/* Global Obliteration of Unwanted Floating Tab Bar across ALL Screen Sizes (PC & Mobile) */
+.mobile-app-tab-bar, .mobile-app-tab, .mobile-section-nav-bar, .mobile-nav-scroll-container, .mobile-nav-tab {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+}
