@@ -56,21 +56,79 @@
 [data-theme="light"] {
   --bg-primary: #f8fafc;
   --bg-secondary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 0.95);
-  --bg-glass: rgba(255, 255, 255, 0.8);
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --bg-glass: rgba(255, 255, 255, 0.85);
   
   --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-secondary: #334155;
   --text-muted: #64748b;
   
-  --border-color: rgba(0, 0, 0, 0.08);
-  --border-color-hover: rgba(99, 102, 241, 0.4);
+  --border-color: rgba(15, 23, 42, 0.12);
+  --border-color-hover: rgba(99, 102, 241, 0.6);
   
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.12);
   --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.2);
+}
+
+/* Force Terminal & Code Snippets to maintain Dark IDE High-Contrast in Light Mode */
+[data-theme="light"] .code-snippet-body,
+[data-theme="light"] .interactive-terminal,
+[data-theme="light"] .terminal-body,
+[data-theme="light"] .terminal-window,
+[data-theme="light"] .terminal-container {
+  background: #0d1424 !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-theme="light"] .code-keyword { color: #c678dd !important; }
+[data-theme="light"] .code-var { color: #e06c75 !important; }
+[data-theme="light"] .code-prop { color: #61afef !important; }
+[data-theme="light"] .code-str { color: #98c379 !important; }
+[data-theme="light"] .code-num { color: #d19a66 !important; }
+
+[data-theme="light"] .terminal-prompt,
+[data-theme="light"] .terminal-cmd {
+  color: #38bdf8 !important;
+}
+
+[data-theme="light"] .terminal-input {
+  color: #f8fafc !important;
+}
+
+/* Ensure all text across all sections has crisp contrast in Light Mode */
+[data-theme="light"] .stat-desc,
+[data-theme="light"] .section-desc,
+[data-theme="light"] .card-desc,
+[data-theme="light"] .project-desc,
+[data-theme="light"] .hero-subtitle-container,
+[data-theme="light"] .hero-description,
+[data-theme="light"] .social-label,
+[data-theme="light"] .mini-stat-lbl,
+[data-theme="light"] .card-title-tab {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .contact-item {
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+[data-theme="light"] .contact-lbl {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .contact-val {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .glass-card {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06) !important;
 }
 
 /* --------------------------------------------------------------------------
