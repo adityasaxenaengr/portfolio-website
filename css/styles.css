@@ -9,9 +9,9 @@
   /* Color Palette - Dark Theme Default */
   --bg-primary: #090d16;
   --bg-secondary: #0f172a;
-  --bg-card: rgba(15, 23, 42, 0.65);
-  --bg-card-hover: rgba(30, 41, 59, 0.8);
-  --bg-glass: rgba(15, 23, 42, 0.7);
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-card-hover: rgba(30, 41, 59, 0.95);
+  --bg-glass: rgba(15, 23, 42, 0.85);
   
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
@@ -28,8 +28,8 @@
   --gradient-glow: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
   --gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
 
-  --border-color: rgba(255, 255, 255, 0.1);
-  --border-color-hover: rgba(99, 102, 241, 0.4);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --border-color-hover: rgba(99, 102, 241, 0.5);
   
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
