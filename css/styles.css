@@ -1945,66 +1945,7 @@ body.cursor-hover .cursor-outline {
   }
 }
 
-/* Mobile Section Tab Bar: Hidden on PC, Sticky Glass Bar on Mobile */
-.mobile-section-nav-bar {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile-section-nav-bar {
-    display: block;
-    position: sticky;
-    top: var(--nav-height);
-    z-index: 1200;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    padding: 8px 12px;
-    width: 100%;
-  }
-
-  .mobile-nav-scroll-container {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .mobile-nav-scroll-container::-webkit-scrollbar {
-    display: none;
-  }
-
-  .mobile-nav-tab {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: var(--radius-full);
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border-color);
-    white-space: nowrap;
-    flex-shrink: 0;
-    transition: all 0.25s ease;
-  }
-
-  .mobile-nav-tab.active, .mobile-nav-tab:hover {
-    background: var(--gradient-main);
-    color: #ffffff;
-    border-color: transparent;
-    box-shadow: 0 0 12px rgba(99, 102, 241, 0.4);
-  }
-
-  /* Mobile App Floating Bottom Navigation Bar (Hidden on PC, Visible on Mobile) */
-  .mobile-app-tab-bar {
-    display: none;
-  }
-}
+/* Mobile Section Tab Bar: Removed */
 
 @media (max-width: 768px) {
   .mobile-app-tab-bar {
