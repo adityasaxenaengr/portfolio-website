@@ -1093,13 +1093,15 @@ body.cursor-hover .cursor-outline {
 .timeline::before {
   content: '';
   position: absolute;
-  left: 10px;
+  left: 20px;
   top: 0;
   bottom: 0;
-  width: 3px;
+  width: 4px;
+  margin-left: -2px;
   background: linear-gradient(180deg, var(--accent-primary), var(--accent-cyan), var(--accent-secondary), var(--accent-primary));
   background-size: 100% 200%;
   animation: moveLineGlow 3s linear infinite;
+  z-index: 1;
 }
 
 @keyframes moveLineGlow {
@@ -1110,10 +1112,10 @@ body.cursor-hover .cursor-outline {
 .timeline::after {
   content: '';
   position: absolute;
-  left: 10px;
+  left: 20px;
   top: 0;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: var(--accent-cyan);
   box-shadow: 0 0 15px var(--accent-cyan), 0 0 30px var(--accent-primary);
@@ -1142,22 +1144,22 @@ body.cursor-hover .cursor-outline {
 
 .timeline-item {
   position: relative;
-  padding-left: 60px;
+  padding-left: 54px;
   margin-bottom: 40px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: 10px;
-  top: 12px;
+  left: 20px;
+  top: 28px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: var(--bg-primary);
   border: 3px solid var(--accent-primary);
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
-  transform: translateX(-50%);
-  z-index: 2;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+  transform: translate(-50%, 0);
+  z-index: 3;
 }
 
 .timeline-content {
