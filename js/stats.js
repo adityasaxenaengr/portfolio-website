@@ -33,7 +33,7 @@
           const aEl = document.getElementById('statAwards');
           const sEl = document.getElementById('statSatisfaction');
 
-          if (yEl) animateValue(yEl, 0, 0, 1000);
+          if (yEl) yEl.innerHTML = "3rd";
           if (pEl) animateValue(pEl, 0, 8, 1500);
           if (aEl) animateValue(aEl, 0, 50, 1500);
           if (sEl) animateValue(sEl, 0, 100, 2000);
