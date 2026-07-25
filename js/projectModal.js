@@ -13,7 +13,7 @@
     if (!project) return;
 
     modalBody.innerHTML = `
-      <div class="project-modal-banner" style="background: ${project.gradient || 'var(--gradient-main)'}; padding: 18px 24px; border-radius: var(--radius-md); color: #fff; margin-bottom: 20px;">
+      <div class="project-modal-banner" style="background: ${project.gradient || 'var(--gradient-main)'}; padding: 18px 56px 18px 24px; border-radius: var(--radius-md); color: #fff; margin-bottom: 20px; position: relative;">
         <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 6px; font-weight: 700;">${project.title}</h3>
         <div style="display: flex; gap: 6px; flex-wrap: wrap;">
           ${project.tags.map(t => `<span style="background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-family: var(--font-code);">${t}</span>`).join('')}

@@ -1755,26 +1755,29 @@ body.cursor-hover .cursor-outline {
 
 .modal-close, .modal-close-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 36px;
-  height: 36px;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
   transition: all 0.2s ease;
 }
 
 .modal-close:hover, .modal-close-btn:hover {
-  background: #ef4444;
-  color: #ffffff;
-  border-color: transparent;
+  background: #ef4444 !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  transform: scale(1.08);
 }
 
 /* Terminal CLI Modal */
