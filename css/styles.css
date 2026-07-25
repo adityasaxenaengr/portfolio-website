@@ -1945,68 +1945,9 @@ body.cursor-hover .cursor-outline {
   }
 }
 
-/* Mobile Section Tab Bar: Removed */
-
-@media (max-width: 768px) {
-  .mobile-app-tab-bar {
-    display: flex;
-    position: fixed;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
-    max-width: 420px;
-    height: 60px;
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 99px;
-    z-index: 9999;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(99, 102, 241, 0.25);
-  }
-
-  .mobile-app-tab {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    font-size: 0.72rem;
-    font-weight: 500;
-    padding: 6px 10px;
-    border-radius: 99px;
-    transition: all 0.25s ease;
-    cursor: pointer;
-    flex: 1;
-  }
-
-  .mobile-app-tab svg, .mobile-app-tab i {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.25s ease;
-  }
-
-  .mobile-app-tab.active {
-    color: #ffffff;
-    background: var(--gradient-main);
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.5);
-  }
-
-  .mobile-app-tab.active svg, .mobile-app-tab.active i {
-    transform: translateY(-1px);
-    stroke: #ffffff !important;
-  }
-
-  body {
-    padding-bottom: 70px;
-  }
+.mobile-app-tab-bar {
+  display: none !important;
+}
 
   html, body, main {
     overflow-x: hidden !important;
