@@ -43,14 +43,8 @@
           <div class="project-overlay">
             <button class="btn btn-primary open-modal-btn" data-project-id="${proj.id}">
               <i data-lucide="eye"></i>
-              <span>View Details</span>
+              <span>View Project Details</span>
             </button>
-            <a href="${proj.liveUrl || '#'}" target="_blank" rel="noopener" class="icon-btn" title="Live Preview">
-              <i data-lucide="external-link"></i>
-            </a>
-            <a href="${proj.githubUrl || '#'}" target="_blank" rel="noopener" class="icon-btn" title="GitHub Code">
-              <i data-lucide="github"></i>
-            </a>
           </div>
         </div>
 
