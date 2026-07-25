@@ -34,8 +34,8 @@
           const sEl = document.getElementById('statSatisfaction');
 
           if (yEl) animateValue(yEl, 0, 0, 1000);
-          if (pEl) animateValue(pEl, 0, 4, 1500);
-          if (aEl) animateValue(aEl, 0, 1, 1000);
+          if (pEl) animateValue(pEl, 0, 8, 1500);
+          if (aEl) animateValue(aEl, 0, 50, 1500);
           if (sEl) animateValue(sEl, 0, 100, 2000);
         }
       });
