@@ -1943,11 +1943,10 @@ body.cursor-hover .cursor-outline {
   .mobile-toggle-btn {
     display: inline-flex;
   }
-}
 
-.mobile-app-tab-bar {
-  display: none !important;
-}
+  .mobile-app-tab-bar {
+    display: none !important;
+  }
 
   html, body, main {
     overflow-x: hidden !important;
