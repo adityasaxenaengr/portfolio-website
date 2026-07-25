@@ -78,18 +78,20 @@
 
   function initProjectModal() {
     window.openProjectModal = openProjectModal;
+    window.closeProjectModal = closeProjectModal;
 
-    const closeBtn = document.getElementById('closeProjectModalBtn');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeProjectModal);
-    }
+    document.addEventListener('click', (e) => {
+      const closeBtn = e.target.closest('#closeProjectModalBtn, .modal-close-btn');
+      if (closeBtn && document.getElementById('projectModalBackdrop')?.classList.contains('open')) {
+        closeProjectModal();
+        return;
+      }
 
-    const backdrop = document.getElementById('projectModalBackdrop');
-    if (backdrop) {
-      backdrop.addEventListener('click', (e) => {
-        if (e.target === backdrop) closeProjectModal();
-      });
-    }
+      const backdrop = document.getElementById('projectModalBackdrop');
+      if (backdrop && e.target === backdrop && backdrop.classList.contains('open')) {
+        closeProjectModal();
+      }
+    });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeProjectModal();
