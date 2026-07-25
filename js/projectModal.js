@@ -50,14 +50,29 @@
       ` : ''}
 
       <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
-        <a href="${project.liveUrl || '#'}" target="_blank" rel="noopener" class="btn btn-primary" style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center;">
-          <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
-          <span>Launch Live Demo</span>
-        </a>
-        <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center;">
-          <i data-lucide="github" style="width: 16px; height: 16px;"></i>
-          <span>View Source Code</span>
-        </a>
+        ${project.liveUrl && project.liveUrl !== '#' ? `
+          <a href="${project.liveUrl}" target="_blank" rel="noopener" class="btn btn-primary" style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center;">
+            <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
+            <span>Launch Live Demo</span>
+          </a>
+        ` : `
+          <button class="btn btn-primary" disabled style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center; opacity: 0.7; cursor: not-allowed; background: rgba(99, 102, 241, 0.2); border-color: rgba(99, 102, 241, 0.3);">
+            <i data-lucide="clock" style="width: 16px; height: 16px;"></i>
+            <span>Live Demo (In Dev)</span>
+          </button>
+        `}
+
+        ${project.githubUrl && project.githubUrl !== '#' ? `
+          <a href="${project.githubUrl}" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center;">
+            <i data-lucide="github" style="width: 16px; height: 16px;"></i>
+            <span>View Source Code</span>
+          </a>
+        ` : `
+          <button class="btn btn-secondary" disabled style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center; opacity: 0.7; cursor: not-allowed; background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.15);">
+            <i data-lucide="code" style="width: 16px; height: 16px;"></i>
+            <span>Source Code (In Dev)</span>
+          </button>
+        `}
       </div>
     `;
 
