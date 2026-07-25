@@ -13,25 +13,25 @@
     if (!project) return;
 
     modalBody.innerHTML = `
-      <div class="project-modal-banner" style="background: ${project.gradient || 'var(--gradient-main)'}; padding: 40px; border-radius: var(--radius-md); text-align: center; color: #fff; margin-bottom: 24px;">
-        <h2 style="font-size: 2rem; color: #fff; margin-bottom: 8px;">${project.title}</h2>
-        <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 12px;">
-          ${project.tags.map(t => `<span style="background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 99px; font-size: 0.8rem; font-family: var(--font-code);">${t}</span>`).join('')}
+      <div class="project-modal-banner" style="background: ${project.gradient || 'var(--gradient-main)'}; padding: 18px 24px; border-radius: var(--radius-md); color: #fff; margin-bottom: 20px;">
+        <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 6px; font-weight: 700;">${project.title}</h3>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          ${project.tags.map(t => `<span style="background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-family: var(--font-code);">${t}</span>`).join('')}
         </div>
       </div>
 
-      <div class="modal-section" style="margin-bottom: 24px;">
-        <h3 style="font-size: 1.2rem; margin-bottom: 8px;">Project Overview</h3>
-        <p style="color: var(--text-secondary);">${project.fullDesc || project.shortDesc}</p>
+      <div class="modal-section" style="margin-bottom: 18px;">
+        <h4 style="font-size: 1rem; color: var(--accent-cyan); margin-bottom: 6px;">Project Overview</h4>
+        <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">${project.fullDesc || project.shortDesc}</p>
       </div>
 
       ${project.features ? `
-        <div class="modal-section" style="margin-bottom: 24px;">
-          <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Key Architectural Features</h3>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px;">
+        <div class="modal-section" style="margin-bottom: 18px;">
+          <h4 style="font-size: 1rem; color: var(--accent-cyan); margin-bottom: 8px;">Key Features</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; padding: 0;">
             ${project.features.map(f => `
-              <li style="display: flex; items-center; gap: 10px; color: var(--text-secondary);">
-                <i data-lucide="check-circle" style="color: var(--accent-cyan); width: 18px; height: 18px; flex-shrink: 0;"></i>
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.88rem;">
+                <i data-lucide="check-circle" style="color: var(--accent-emerald); width: 16px; height: 16px; flex-shrink: 0;"></i>
                 <span>${f}</span>
               </li>
             `).join('')}
@@ -40,22 +40,22 @@
       ` : ''}
 
       ${project.architectureNotes ? `
-        <div class="modal-section" style="margin-bottom: 24px; padding: 16px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: var(--radius-md);">
-          <h4 style="color: var(--accent-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 8px;">
-            <i data-lucide="cpu" style="width: 18px; height: 18px;"></i>
-            System & Infrastructure Highlights
-          </h4>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">${project.architectureNotes}</p>
+        <div class="modal-section" style="margin-bottom: 20px; padding: 12px 16px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: var(--radius-md);">
+          <h5 style="color: var(--accent-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">
+            <i data-lucide="cpu" style="width: 16px; height: 16px;"></i>
+            Architecture & Tech Stack
+          </h5>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">${project.architectureNotes}</p>
         </div>
       ` : ''}
 
-      <div style="display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap;">
-        <a href="${project.liveUrl || '#'}" target="_blank" rel="noopener" class="btn btn-primary" style="flex-grow: 1;">
-          <i data-lucide="external-link"></i>
+      <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;">
+        <a href="${project.liveUrl || '#'}" target="_blank" rel="noopener" class="btn btn-primary" style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center;">
+          <i data-lucide="external-link" style="width: 16px; height: 16px;"></i>
           <span>Launch Live Demo</span>
         </a>
-        <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener" class="btn btn-secondary" style="flex-grow: 1;">
-          <i data-lucide="github"></i>
+        <a href="${project.githubUrl || '#'}" target="_blank" rel="noopener" class="btn btn-secondary" style="flex: 1; padding: 10px 16px; font-size: 0.88rem; justify-content: center;">
+          <i data-lucide="github" style="width: 16px; height: 16px;"></i>
           <span>View Source Code</span>
         </a>
       </div>
