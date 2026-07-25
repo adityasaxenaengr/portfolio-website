@@ -1722,6 +1722,11 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: -1;
+  display: none !important;
+}
+
+.modal.open .modal-backdrop, .modal-backdrop.open {
+  display: block !important;
 }
 
 .modal-close, .modal-close-btn {
