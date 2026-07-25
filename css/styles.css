@@ -503,9 +503,9 @@ body.cursor-hover .cursor-outline {
   gap: 10px;
   padding: 6px 16px;
   border-radius: var(--radius-full);
-  background: var(--gradient-card);
-  border: 1px solid var(--border-color);
-  color: var(--accent-primary);
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: var(--accent-emerald);
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 24px;
@@ -515,15 +515,15 @@ body.cursor-hover .cursor-outline {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent-primary);
-  box-shadow: 0 0 10px var(--accent-primary);
+  background: var(--accent-emerald);
+  box-shadow: 0 0 10px var(--accent-emerald);
   animation: pulseDot 2s infinite;
 }
 
 @keyframes pulseDot {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--border-color); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px transparent; }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 transparent; }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
 .hero-title {
