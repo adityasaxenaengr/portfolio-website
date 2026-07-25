@@ -49,7 +49,7 @@
   --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-  --nav-height: 80px;
+  --nav-height: 64px;
 }
 
 /* Light Theme Overrides */
@@ -385,10 +385,11 @@ body.cursor-hover .cursor-outline {
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
-  background: rgba(9, 13, 22, 0.75);
+  background: rgba(9, 13, 22, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: none !important;
+  box-shadow: none !important;
   transition: background var(--transition-normal);
 }
 
