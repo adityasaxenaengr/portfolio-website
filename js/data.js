@@ -138,26 +138,50 @@ window.PORTFOLIO_DATA = {
     }
   ],
 
-  testimonials: [
+  certifications: [
     {
-      quote: "Aditya is a highly dedicated student with excellent enthusiasm for building clean, modern web applications and software solutions!",
-      name: "Peer & Instructor Review",
-      role: "Computer Science Department"
+      id: "cert-java",
+      title: "Java Programming (Basic & Intermediate)",
+      issuer: "HackerRank / Oracle Academy",
+      issuerLogo: "☕",
+      date: "2024",
+      credId: "HR-JAVA-2024-X99",
+      skills: ["Java", "OOPs", "Collections", "Exception Handling"],
+      verified: true,
+      description: "Demonstrates proficiency in Java syntax, Object-Oriented Programming (OOP), exception handling, and data collection structures."
     },
     {
-      quote: "Great problem-solving mindset and impressive speed in learning full-stack web technologies and writing clean code.",
-      name: "Project Mentor Review",
-      role: "Web Development Specialist"
+      id: "cert-python",
+      title: "Python Programming & Automation Certificate",
+      issuer: "Cisco Networking Academy",
+      issuerLogo: "🐍",
+      date: "2024",
+      credId: "PY-CERT-8841-A22",
+      skills: ["Python 3", "Automation", "File I/O", "Data Structures"],
+      verified: true,
+      description: "Covers Python programming fundamentals, algorithmic problem solving, scripting, and file processing utilities."
     },
     {
-      quote: "Demonstrates strong logic, great collaboration skills in group coding sessions, and excellent knowledge of Python and Java.",
-      name: "Peer Code Reviewer",
-      role: "Full-Stack Development Team"
+      id: "cert-webdev",
+      title: "Responsive Web Design Certification",
+      issuer: "freeCodeCamp",
+      issuerLogo: "💻",
+      date: "2024",
+      credId: "FCC-RWD-9923-B11",
+      skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
+      verified: true,
+      description: "Comprehensive certification covering HTML5 semantic structure, CSS3 Flexbox/Grid layouts, typography, and responsive web design."
     },
     {
-      quote: "Consistently demonstrates high attention to detail in UI responsiveness, modern design aesthetics, and backend database structure.",
-      name: "Technical Evaluator",
-      role: "Software Engineering Lab"
+      id: "cert-problemsolving",
+      title: "Problem Solving (Basic) Certificate",
+      issuer: "HackerRank",
+      issuerLogo: "🧩",
+      date: "2024",
+      credId: "HR-PS-7712-C44",
+      skills: ["Data Structures", "Algorithms", "Array/String", "Logic"],
+      verified: true,
+      description: "Validates core problem-solving capability, data structure manipulation, and algorithmic efficiency."
     }
   ]
 };
