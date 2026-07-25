@@ -15,7 +15,7 @@ window.PORTFOLIO_DATA = {
     degree: "B.Tech in Computer Science & Engineering (CSE)",
     university: "Dr. A.P.J. Abdul Kalam Technical University (AKTU)",
     yearsExperience: 0,
-    projectsCompleted: 1,
+    projectsCompleted: 3,
     openSourceStars: 10,
     clientSatisfaction: 100
   },
@@ -44,26 +44,6 @@ window.PORTFOLIO_DATA = {
   ],
 
   projects: [
-    {
-      id: "portfolio-website",
-      title: "Personal Developer Portfolio Website",
-      category: "web",
-      image: "images/project-portfolio.jpg",
-      shortDesc: "A modern, glassmorphic portfolio web app with dark/light mode, terminal CLI, and responsive design.",
-      tags: ["HTML5", "CSS3", "JavaScript", "Responsive UI"],
-      liveUrl: "index.html",
-      githubUrl: "https://github.com/adityasaxenaengr/portfolio-website",
-      svgBanner: "💻 Personal Developer Portfolio",
-      gradient: "linear-gradient(135deg, #6366f1, #a855f7)",
-      fullDesc: "This personal portfolio website is my foundational full-stack project, showcasing interactive features including dark/light theme switching, live skill search, filterable project galleries, terminal CLI easter egg, and custom UI audio effects.",
-      features: [
-        "Modern glassmorphism UI design with dark & light theme engine",
-        "Interactive Terminal CLI easter egg supporting custom commands",
-        "Responsive across Desktop, Tablet, and Mobile screens",
-        "Clean modular JavaScript architecture without external heavy frameworks"
-      ],
-      architectureNotes: "Built with standard semantic HTML5, custom CSS design system, and modular ES JavaScript."
-    },
     {
       id: "upcoming-ecommerce",
       title: "Full-Stack E-Commerce Store",
