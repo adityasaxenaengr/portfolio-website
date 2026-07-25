@@ -1712,59 +1712,58 @@ body.cursor-hover .cursor-outline {
 /* --------------------------------------------------------------------------
    15. MODALS & OVERLAYS
    -------------------------------------------------------------------------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3500;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.modal.open {
+  display: flex !important;
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--transition-normal);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: -1;
 }
 
-.modal-backdrop.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-content {
-  max-width: 800px;
-  width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  padding: 36px;
-  transform: scale(0.95);
-  transition: transform var(--transition-normal);
-}
-
-.modal-backdrop.open .modal-content {
-  transform: scale(1);
-}
-
-.modal-close-btn {
+.modal-close, .modal-close-btn {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 16px;
+  right: 16px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--border-color);
   color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background var(--transition-fast);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
 }
 
-.modal-close-btn:hover {
-  background: var(--accent-rose);
-  color: #fff;
+.modal-close:hover, .modal-close-btn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: transparent;
 }
 
 /* Terminal CLI Modal */
