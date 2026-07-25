@@ -385,16 +385,17 @@ body.cursor-hover .cursor-outline {
   width: 100%;
   height: var(--nav-height);
   z-index: 1000;
-  background: rgba(9, 13, 22, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
   border-bottom: none !important;
   box-shadow: none !important;
   transition: background var(--transition-normal);
 }
 
 [data-theme="light"] .navbar {
-  background: rgba(248, 250, 252, 0.85);
+  background: transparent !important;
 }
 
 .nav-container {
