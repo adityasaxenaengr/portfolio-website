@@ -497,33 +497,33 @@ body.cursor-hover .cursor-outline {
   align-items: center;
 }
 
-.status-badge {
+.status-badge, .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
   padding: 6px 16px;
   border-radius: var(--radius-full);
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  color: var(--accent-emerald);
+  background: var(--gradient-card);
+  border: 1px solid var(--border-color);
+  color: var(--accent-primary);
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 24px;
 }
 
-.status-dot {
+.status-dot, .badge-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent-emerald);
-  box-shadow: 0 0 10px var(--accent-emerald);
+  background: var(--accent-primary);
+  box-shadow: 0 0 10px var(--accent-primary);
   animation: pulseDot 2s infinite;
 }
 
 @keyframes pulseDot {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 var(--border-color); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px transparent; }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 transparent; }
 }
 
 .hero-title {
