@@ -45,62 +45,27 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: "upcoming-ecommerce",
-      title: "Full-Stack E-Commerce Store",
-      category: "fullstack",
-      image: "images/project-ecommerce.jpg",
-      shortDesc: "A full-stack online shop featuring product catalog, shopping cart, and secure checkout flow.",
-      tags: ["React", "Node.js", "Express", "MongoDB"],
-      liveUrl: "#",
-      githubUrl: "#",
-      svgBanner: "🛒 Full-Stack E-Commerce Store",
-      gradient: "linear-gradient(135deg, #10b981, #06b6d4)",
-      fullDesc: "Currently planning and building a full-stack e-commerce web application with user authentication, product filtering, shopping cart state management, and payment gateway integration.",
+      id: "toolstudio-pro",
+      title: "ToolStudio Pro — All-in-One 150+ Web Utility Suite",
+      category: "web",
+      image: "images/project-toolstudio.jpg",
+      shortDesc: "A high-performance flagship client-side web utility suite with 150+ tools across 11 categories (PDF, QR, Dev, CSS, Image, Security, Finance, AI, Math, Text & Games) featuring 100% privacy, offline PWA, and zero latency.",
+      tags: ["JavaScript (ES6+)", "HTML5/CSS3", "PWA", "Web Audio API", "PDF-Lib", "Vercel"],
+      liveUrl: "https://toolstudio.vercel.app",
+      githubUrl: "https://github.com/adityasaxenaengr/toolstudio",
+      svgBanner: "🛠️ ToolStudio Pro — 150+ Web Utility Suite",
+      gradient: "linear-gradient(135deg, #00f0ff, #a855f7)",
+      fullDesc: "ToolStudio Pro is a flagship client-side web application engineered with 150+ fully functional tools across 11 specialized categories: PDF & Document Studio, QR & Barcode Suite, Developer & Code Hub, CSS & UI Design Studio, Image & Media Studio, Security & Converters, Financial Hub (with 160+ World Currency Converter), AI Text Lab, Productivity Calculators, Text & String Studio, and Gaming & Brain Hub. Built with zero third-party tracking, 100% local browser execution, offline PWA installation, and responsive glassmorphism HUD UI.",
       features: [
-        "User registration & JWT authentication system",
-        "Product catalog with category search and price filters",
-        "Persistent cart management and order summary checkout",
-        "Admin dashboard for inventory management"
+        "150+ Fully Functional Client-Side Tools across 11 specialized categories",
+        "100% Private & Zero Latency: All processing (PDF, Image, Encryption, Audio) happens locally in browser",
+        "Offline Progressive Web App (PWA) with Service Worker caching and 1-Click desktop/mobile installation",
+        "1:1 Physical Teal Blue Casio fx-991ES PLUS Scientific Calculator with Natural V.P.A.M. display",
+        "Global World Currency Converter with 160+ currencies & live real-time FX market rates API",
+        "Interactive Mini Games (Sudoku Master with Auto-Solver, Typing Speed WPM Test, 2048, Wordle, Memory Matrix)",
+        "High-Tech HUD Interface with Glassmorphism, Spotlight Search (Ctrl+K), Split-Screen mode, and Dark/Light theme"
       ],
-      architectureNotes: "Planned stack: React frontend with Node.js/Express REST API and MongoDB database."
-    },
-    {
-      id: "upcoming-python-automation",
-      title: "Python Automation & Utilities Tool",
-      category: "ai",
-      image: "images/project-python.jpg",
-      shortDesc: "A suite of Python scripts and automated tools for file management, web scraping, and data processing.",
-      tags: ["Python", "Automation", "Scripts", "Web Scraping"],
-      liveUrl: "#",
-      githubUrl: "#",
-      svgBanner: "🐍 Python Automation & Tools",
-      gradient: "linear-gradient(135deg, #f59e0b, #ef4444)",
-      fullDesc: "A practical Python application built to automate repetitive daily tasks, scrape web data, parse text files, and perform data analysis.",
-      features: [
-        "Automated file organizer and batch renamer",
-        "Web scraping module extracting structured data into CSV/JSON",
-        "Command-line utility interface with customizable options"
-      ],
-      architectureNotes: "Built using Python 3, Beautiful Soup, Requests, and standard OS/sys libraries."
-    },
-    {
-      id: "upcoming-java-backend",
-      title: "Java Management & Banking System",
-      category: "backend",
-      image: "images/project-java.jpg",
-      shortDesc: "An object-oriented Java application managing user accounts, transactions, and data records.",
-      tags: ["Java", "OOP", "SQL", "Algorithms"],
-      liveUrl: "#",
-      githubUrl: "#",
-      svgBanner: "☕ Java Management & Banking System",
-      gradient: "linear-gradient(135deg, #06b6d4, #6366f1)",
-      fullDesc: "An enterprise-style Java application applying Object-Oriented Programming (OOP) principles, data structures, and database connectivity.",
-      features: [
-        "Account creation, deposit, withdrawal, and balance tracking logic",
-        "Robust input validation and exception handling",
-        "Database integration using JDBC for persistent record storage"
-      ],
-      architectureNotes: "Built in Java using OOP design patterns (Encapsulation, Inheritance, Polymorphism)."
+      architectureNotes: "Engineered using vanilla JavaScript (ES6+), HTML5, custom CSS Glassmorphism design system, Web Audio API, Canvas API, PDF-lib, PDF.js, jsPDF, WebSpeech API, Service Workers for PWA caching, and Open Exchange Rates API for live forex rates. Deployed on Vercel with GitHub CI/CD automation."
     }
   ],
 
