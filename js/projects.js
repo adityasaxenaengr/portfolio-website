@@ -34,7 +34,7 @@
     }
 
     grid.innerHTML = filtered.map(proj => `
-      <div class="project-card glass-card" data-project-id="${proj.id}">
+      <div class="project-card glass-card reveal-up in" data-project-id="${proj.id}">
         <div class="project-thumbnail open-modal-btn" data-project-id="${proj.id}" style="cursor: pointer;">
           ${proj.image ? `<img src="${proj.image}" alt="${proj.title}" class="project-card-img">` : `
           <div class="project-svg-visual" style="background: ${proj.gradient || 'var(--gradient-main)'}">

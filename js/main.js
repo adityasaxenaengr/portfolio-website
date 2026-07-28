@@ -5,6 +5,9 @@
 
 (function () {
   let isSoundEnabled = true;
+  window.PORTFOLIO_STATE = {
+    get soundEnabled() { return isSoundEnabled; }
+  };
 
   // Synthesize UI sound effects via Web Audio API
   window.playAudioEffect = function (type) {

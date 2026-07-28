@@ -32,7 +32,7 @@
     }
 
     grid.innerHTML = filtered.map(skill => `
-      <div class="skill-card glass-card">
+      <div class="skill-card glass-card reveal-up in">
         <div class="skill-icon-wrapper">
           <i data-lucide="${skill.icon || 'code'}"></i>
         </div>
