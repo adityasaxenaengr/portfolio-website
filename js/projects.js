@@ -44,7 +44,7 @@
 
         <div class="project-body">
           <div class="project-tags">
-            ${proj.tags.map(t => `<span class="tag-pill">${t}</span>`).join('')}
+            ${proj.tags.map(t => t === 'Coming Soon' ? `<span class="tag-pill" style="background: rgba(245, 158, 11, 0.12); color: #F59E0B; border-color: rgba(245, 158, 11, 0.3); font-weight: 600;">🚧 Coming Soon</span>` : `<span class="tag-pill">${t}</span>`).join('')}
           </div>
 
           <h3 class="project-title">${proj.title}</h3>

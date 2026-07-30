@@ -10,8 +10,8 @@
 
     const certs = window.PORTFOLIO_DATA.certifications || [];
 
-    grid.innerHTML = certs.map(cert => `
-      <div class="cert-card glass-card" data-cert-id="${cert.id}" style="cursor: pointer;">
+        grid.innerHTML = certs.map(cert => `
+      <div class="cert-card glass-card ${cert.isComingSoon ? 'coming-soon-card' : ''}" data-cert-id="${cert.id}" style="cursor: ${cert.isComingSoon ? 'default' : 'pointer'};">
         <div class="cert-header">
           <div class="cert-issuer-badge">
             <span class="cert-logo">${cert.issuerLogo}</span>
@@ -20,9 +20,7 @@
               <div class="cert-issuer">${cert.issuer}</div>
             </div>
           </div>
-          <span class="cert-verified-badge" title="Verified Credential">
-            <i data-lucide="shield-check"></i> Verified
-          </span>
+          ${cert.isComingSoon ? `<span class="cert-verified-badge" style="color: #F59E0B; background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.25);"><i data-lucide="clock"></i> Coming Soon</span>` : `<span class="cert-verified-badge" title="Verified Credential"><i data-lucide="shield-check"></i> Verified</span>`}
         </div>
 
         <p class="cert-desc">${cert.description}</p>
@@ -33,7 +31,7 @@
 
         <div class="cert-footer">
           <span class="cert-id">ID: <code>${cert.credId}</code></span>
-          <span class="cert-click-hint"><i data-lucide="eye"></i> Tap to View</span>
+          ${cert.isComingSoon ? `<span class="cert-click-hint" style="color: var(--text-muted); opacity: 0.75;"><i data-lucide="clock"></i> Verification Pending</span>` : `<span class="cert-click-hint"><i data-lucide="eye"></i> Tap to View</span>`}
         </div>
       </div>
     `).join('');
@@ -42,10 +40,17 @@
       window.lucide.createIcons();
     }
 
-    // Add Click Listeners to open Certificate Modal
+        // Add Click Listeners to open Certificate Modal (Only for non-Coming Soon verified certs)
     document.querySelectorAll('.cert-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.getAttribute('data-cert-id');
+        const cert = certs.find(c => c.id === id);
+        if (cert && cert.isComingSoon) {
+          if (window.showToast) {
+            window.showToast('Certificate verification in progress. Real document will be available soon.', 'info');
+          }
+          return; // Do NOT open modal for Coming Soon cards!
+        }
         openCertificateModal(id);
       });
     });
@@ -134,26 +139,79 @@
       window.playAudioEffect('open');
     }
 
-    // Print Button Action
+    // Print Button Action (Dedicated Print View)
     document.getElementById('printCertBtn')?.addEventListener('click', () => {
-      window.print();
+      const certContainer = document.querySelector('.official-certificate-container') || document.getElementById('certModalBody');
+      const certHtml = certContainer.outerHTML;
+      const printWin = window.open('', '_blank');
+      printWin.document.write(`
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Aditya's ${cert.title} Certificate</title>
+            <link rel="stylesheet" href="css/styles.css">
+            <style>
+              body { background: #0B1220 !important; color: #F8FAFC !important; padding: 40px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+              .official-certificate-container { width: 100%; max-width: 800px; }
+              @media print {
+                body { background: #0B1220 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+              }
+            </style>
+          </head>
+          <body>
+            ${certHtml}
+            <script>
+              setTimeout(() => { window.print(); window.close(); }, 500);
+            </script>
+          </body>
+        </html>
+      `);
+      printWin.document.close();
     });
 
-    // Download Button Action
+    // Download Button Action (PDF format: aditya's_[title]_certificate.pdf)
     document.getElementById('downloadCertBtn')?.addEventListener('click', () => {
+      const certContainer = document.querySelector('.official-certificate-container') || document.getElementById('certModalBody');
+      const cleanTitle = cert.title.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+      const fileName = `aditya's_${cleanTitle}_certificate.pdf`;
+
       if (window.showToast) {
-        window.showToast(`Downloading ${cert.title} Certificate...`, 'success');
+        window.showToast(`Generating ${fileName}...`, 'success');
       }
-      const certText = `====================================================\nCERTIFICATE OF ACHIEVEMENT\n====================================================\nThis is to certify that ADITYA SAXENA has successfully earned the ${cert.title} from ${cert.issuer}.\nIssued: ${cert.date}\nCredential ID: ${cert.credId}\n====================================================`;
-      const blob = new Blob([certText], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `Aditya_Saxena_${cert.id}.txt`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+
+      if (window.html2pdf) {
+        const opt = {
+          margin:       0.2,
+          filename:     fileName,
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#0B1220' },
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'landscape' }
+        };
+        window.html2pdf().set(opt).from(certContainer).save();
+      } else {
+        const certHtml = certContainer.outerHTML;
+        const printWin = window.open('', '_blank');
+        printWin.document.write(`
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <title>${fileName}</title>
+              <link rel="stylesheet" href="css/styles.css">
+              <style>
+                body { background: #0B1220 !important; color: #F8FAFC !important; padding: 40px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+                .official-certificate-container { width: 100%; max-width: 800px; }
+              </style>
+            </head>
+            <body>
+              ${certHtml}
+              <script>
+                setTimeout(() => { window.print(); window.close(); }, 500);
+              </script>
+            </body>
+          </html>
+        `);
+        printWin.document.close();
+      }
     });
   }
 

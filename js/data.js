@@ -20,11 +20,13 @@ window.PORTFOLIO_DATA = {
     clientSatisfaction: 100
   },
 
-  typingTitles: [
-    "Full-Stack Web Apps",
-    "Python Automation",
-    "Java OOP Software",
-    "Responsive UIs"
+      typingTitles: [
+    "Full-Stack Engineer.",
+    "Java & Python Tech.",
+    "High-Performance Code.",
+    "Modern Web Design.",
+    "Java & Full-Stack.",
+    "Python & Web Engineering."
   ],
 
   skills: [
@@ -43,29 +45,69 @@ window.PORTFOLIO_DATA = {
     { name: "Git & GitHub", level: 85, category: "devops", icon: "git-branch", desc: "Version Control, Repository Management, Open Source" }
   ],
 
-  projects: [
+    projects: [
     {
-      id: "toolstudio-pro",
-      title: "ToolStudio Pro — All-in-One 150+ Web Utility Suite",
+      id: "fullstack-saas-app",
+      title: "Full-Stack SaaS Platform",
       category: "web",
-      image: "images/project-toolstudio.jpg",
-      shortDesc: "A high-performance flagship client-side web utility suite with 150+ tools across 11 categories (PDF, QR, Dev, CSS, Image, Security, Finance, AI, Math, Text & Games) featuring 100% privacy, offline PWA, and zero latency.",
-      tags: ["JavaScript (ES6+)", "HTML5/CSS3", "PWA", "Web Audio API", "PDF-Lib", "Vercel"],
-      liveUrl: "https://toolstudio.vercel.app",
-      githubUrl: "https://github.com/adityasaxenaengr/toolstudio",
-      svgBanner: "🛠️ ToolStudio Pro — 150+ Web Utility Suite",
-      gradient: "linear-gradient(135deg, #00f0ff, #a855f7)",
-      fullDesc: "ToolStudio Pro is a flagship client-side web application engineered with 150+ fully functional tools across 11 specialized categories: PDF & Document Studio, QR & Barcode Suite, Developer & Code Hub, CSS & UI Design Studio, Image & Media Studio, Security & Converters, Financial Hub (with 160+ World Currency Converter), AI Text Lab, Productivity Calculators, Text & String Studio, and Gaming & Brain Hub. Built with zero third-party tracking, 100% local browser execution, offline PWA installation, and responsive glassmorphism HUD UI.",
+      image: "",
+      shortDesc: "A modern, high-performance web application built with React, Node.js, and SQL. Currently under active development.",
+      tags: ["Full-Stack", "React.js", "Node.js", "SQL", "Coming Soon"],
+      liveUrl: "",
+      githubUrl: "",
+      svgBanner: "🚀 Full-Stack SaaS Platform — Coming Soon",
+      gradient: "linear-gradient(135deg, #1e293b, #0f172a)",
+      isComingSoon: true,
+      fullDesc: "This flagship Full-Stack SaaS Application is currently under active development. It features a modern responsive UI, secure user authentication, REST APIs, and database integration.",
       features: [
-        "150+ Fully Functional Client-Side Tools across 11 specialized categories",
-        "100% Private & Zero Latency: All processing (PDF, Image, Encryption, Audio) happens locally in browser",
-        "Offline Progressive Web App (PWA) with Service Worker caching and 1-Click desktop/mobile installation",
-        "1:1 Physical Teal Blue Casio fx-991ES PLUS Scientific Calculator with Natural V.P.A.M. display",
-        "Global World Currency Converter with 160+ currencies & live real-time FX market rates API",
-        "Interactive Mini Games (Sudoku Master with Auto-Solver, Typing Speed WPM Test, 2048, Wordle, Memory Matrix)",
-        "High-Tech HUD Interface with Glassmorphism, Spotlight Search (Ctrl+K), Split-Screen mode, and Dark/Light theme"
+        "🚧 Active Development: Architecture & API Endpoints in progress",
+        "⚡ High-Performance React.js Frontend UI with Tailwind & Glassmorphism",
+        "🔐 Secure REST API Backend with Node.js & Express",
+        "💾 Scalable Relational Database Schema Design (MySQL / PostgreSQL)"
       ],
-      architectureNotes: "Engineered using vanilla JavaScript (ES6+), HTML5, custom CSS Glassmorphism design system, Web Audio API, Canvas API, PDF-lib, PDF.js, jsPDF, WebSpeech API, Service Workers for PWA caching, and Open Exchange Rates API for live forex rates. Deployed on Vercel with GitHub CI/CD automation."
+      architectureNotes: "Project is under active development. Live demonstration URL and GitHub repository link will be published upon official v1.0 release."
+    },
+    {
+      id: "ai-automation-tool",
+      title: "Python AI & Automation Suite",
+      category: "python",
+      image: "",
+      shortDesc: "Automated data processing, web scraping, and API integration suite built with Python. Under active development.",
+      tags: ["Python 3", "Automation", "REST APIs", "Coming Soon"],
+      liveUrl: "",
+      githubUrl: "",
+      svgBanner: "🐍 Python Automation Suite — Coming Soon",
+      gradient: "linear-gradient(135deg, #1e293b, #0f172a)",
+      isComingSoon: true,
+      fullDesc: "A modular Python automation tool engineered for automated data extraction, API workflows, and system utilities.",
+      features: [
+        "🚧 Active Development: Core modules and scripting pipeline in progress",
+        "⚡ Automated Data Extraction & Multi-threaded Scraping Utilities",
+        "🔄 Async API Workflows & File Processing Engines",
+        "📊 High-Efficiency Data Cleaning & Analytics Pipeline"
+      ],
+      architectureNotes: "Project is under active development. Source code and documentation will be released on GitHub soon."
+    },
+    {
+      id: "java-enterprise-app",
+      title: "Java OOP Enterprise System",
+      category: "java",
+      image: "",
+      shortDesc: "Object-oriented desktop and backend application built with Java and clean architectural design patterns. Under active development.",
+      tags: ["Java", "OOP", "Design Patterns", "Coming Soon"],
+      liveUrl: "",
+      githubUrl: "",
+      svgBanner: "☕ Java Enterprise System — Coming Soon",
+      gradient: "linear-gradient(135deg, #1e293b, #0f172a)",
+      isComingSoon: true,
+      fullDesc: "A robust Java backend application demonstrating Object-Oriented Programming (OOP) principles, clean architecture, and data structures.",
+      features: [
+        "🚧 Active Development: Class hierarchy and core business logic in progress",
+        "☕ Object-Oriented Architecture (Encapsulation, Inheritance, Polymorphism)",
+        "⚙️ Robust Exception Handling & Logging Pipeline",
+        "📂 File Systems & Data Collection Processing"
+      ],
+      architectureNotes: "Project is under active development. Full documentation and GitHub repository link will be available upon completion."
     }
   ],
 
@@ -83,50 +125,42 @@ window.PORTFOLIO_DATA = {
     }
   ],
 
-  certifications: [
+    certifications: [
     {
-      id: "cert-java",
-      title: "Java Programming (Basic & Intermediate)",
-      issuer: "HackerRank / Oracle Academy",
+      id: "cert-java-upcoming",
+      title: "Java & OOP Software Certification",
+      issuer: "Official Verification in Progress",
       issuerLogo: "☕",
-      date: "2024",
-      credId: "HR-JAVA-2024-X99",
-      skills: ["Java", "OOPs", "Collections", "Exception Handling"],
-      verified: true,
-      description: "Demonstrates proficiency in Java syntax, Object-Oriented Programming (OOP), exception handling, and data collection structures."
+      date: "Coming Soon",
+      credId: "VERIFYING...",
+      skills: ["Java", "OOP", "Data Structures"],
+      verified: false,
+      isComingSoon: true,
+      description: "Official certificate verification in progress. Real credentials, badges, and verified documents will be published soon."
     },
     {
-      id: "cert-python",
-      title: "Python Programming & Automation Certificate",
-      issuer: "Cisco Networking Academy",
+      id: "cert-python-upcoming",
+      title: "Python & Automation Certificate",
+      issuer: "Official Verification in Progress",
       issuerLogo: "🐍",
-      date: "2024",
-      credId: "PY-CERT-8841-A22",
-      skills: ["Python 3", "Automation", "File I/O", "Data Structures"],
-      verified: true,
-      description: "Covers Python programming fundamentals, algorithmic problem solving, scripting, and file processing utilities."
+      date: "Coming Soon",
+      credId: "VERIFYING...",
+      skills: ["Python 3", "Automation", "Scripting"],
+      verified: false,
+      isComingSoon: true,
+      description: "Official certificate verification in progress. Real credentials, badges, and verified documents will be published soon."
     },
     {
-      id: "cert-webdev",
-      title: "Responsive Web Design Certification",
-      issuer: "freeCodeCamp",
+      id: "cert-webdev-upcoming",
+      title: "Full-Stack Web Engineering Certification",
+      issuer: "Official Verification in Progress",
       issuerLogo: "💻",
-      date: "2025",
-      credId: "FCC-RWD-2025-B11",
-      skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      verified: true,
-      description: "Comprehensive certification covering HTML5 semantic structure, CSS3 Flexbox/Grid layouts, typography, and responsive web design."
-    },
-    {
-      id: "cert-problemsolving",
-      title: "Problem Solving (Basic) Certificate",
-      issuer: "HackerRank",
-      issuerLogo: "🧩",
-      date: "2026",
-      credId: "HR-PS-2026-C44",
-      skills: ["Data Structures", "Algorithms", "Array/String", "Logic"],
-      verified: true,
-      description: "Validates core problem-solving capability, data structure manipulation, and algorithmic efficiency."
+      date: "Coming Soon",
+      credId: "VERIFYING...",
+      skills: ["HTML5/CSS3", "JavaScript", "React.js"],
+      verified: false,
+      isComingSoon: true,
+      description: "Official certificate verification in progress. Real credentials, badges, and verified documents will be published soon."
     }
   ]
 };

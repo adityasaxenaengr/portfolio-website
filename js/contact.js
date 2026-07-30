@@ -48,7 +48,7 @@
     canvas.height = window.innerHeight;
 
     const particles = [];
-    const colors = ['#6366f1', '#a855f7', '#06b6d4', '#10b981', '#f59e0b'];
+    const colors = ['#3b82f6', '#60a5fa', '#22c55e', '#ffffff', '#262626'];
 
     for (let i = 0; i < 90; i++) {
       particles.push({

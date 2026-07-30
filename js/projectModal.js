@@ -13,7 +13,7 @@
     if (!project) return;
 
     modalBody.innerHTML = `
-      <div class="project-modal-banner" style="background: ${project.gradient || 'var(--gradient-main)'}; padding: 18px 56px 18px 24px; border-radius: var(--radius-md); color: #fff; margin-bottom: 20px; position: relative;">
+      <div class="project-modal-banner" style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-md); color: var(--text-primary); margin-bottom: 20px; position: relative;">
         <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 6px; font-weight: 700;">${project.title}</h3>
         <div style="display: flex; gap: 6px; flex-wrap: wrap;">
           ${project.tags.map(t => `<span style="background: rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-family: var(--font-code);">${t}</span>`).join('')}
@@ -21,13 +21,13 @@
       </div>
 
       <div class="modal-section" style="margin-bottom: 18px;">
-        <h4 style="font-size: 1rem; color: var(--accent-cyan); margin-bottom: 6px;">Project Overview</h4>
+        <h4 style="font-size: 1rem; color: var(--accent-primary); margin-bottom: 6px;">Project Overview</h4>
         <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">${project.fullDesc || project.shortDesc}</p>
       </div>
 
       ${project.features ? `
         <div class="modal-section" style="margin-bottom: 18px;">
-          <h4 style="font-size: 1rem; color: var(--accent-cyan); margin-bottom: 8px;">Key Features</h4>
+          <h4 style="font-size: 1rem; color: var(--accent-primary); margin-bottom: 8px;">Key Features</h4>
           <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; padding: 0;">
             ${project.features.map(f => `
               <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.88rem;">
