@@ -45,7 +45,7 @@ window.PORTFOLIO_DATA = {
       id: "toolstudio",
       title: "ToolStudio — 40+ Advanced Web Tools Suite",
       category: "web",
-      image: "",
+      image: "images/project-toolstudio.jpg",
       shortDesc: "A high-performance, privacy-first web application featuring 40+ instant browser tools for developers, designers, and creators. 0ms server latency with 100% client-side execution.",
       tags: ["JavaScript (ES6+)", "HTML5 & Vanilla CSS3", "Canvas API", "Web Crypto API", "Service Worker (PWA)", "40+ Tools"],
       liveUrl: "https://toolstudio.vercel.app",

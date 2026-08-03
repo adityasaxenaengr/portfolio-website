@@ -9,6 +9,7 @@
     if (!project) return;
 
     modalBody.innerHTML = `
+      ${project.image ? `<div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md);"><img src="${project.image}" alt="${project.title}" style="width: 100%; height: auto; max-height: 280px; object-fit: cover; display: block;"></div>` : ''}
       <div class="project-modal-banner" style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 20px; border-radius: var(--radius-md); color: var(--text-primary); margin-bottom: 20px; position: relative;">
         <h3 style="font-size: 1.35rem; color: #fff; margin-bottom: 6px; font-weight: 700;">${project.title}</h3>
         <div style="display: flex; gap: 6px; flex-wrap: wrap;">
