@@ -35,6 +35,20 @@
         </div>
       ` : ''}
 
+      ${project.skillsUsed ? `
+        <div class="modal-section" style="margin-bottom: 18px;">
+          <h4 style="font-size: 1rem; color: var(--accent-primary); margin-bottom: 8px;">Key Skills & Engineering Utilized</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px; padding: 0;">
+            ${project.skillsUsed.map(s => `
+              <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.88rem;">
+                <i data-lucide="code-2" style="color: #38bdf8; width: 16px; height: 16px; flex-shrink: 0;"></i>
+                <span>${s}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      ` : ''}
+
       ${project.architectureNotes ? `
         <div class="modal-section" style="margin-bottom: 20px; padding: 12px 16px; background: rgba(99, 102, 241, 0.08); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: var(--radius-md);">
           <h5 style="color: var(--accent-primary); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; font-size: 0.9rem;">

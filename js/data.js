@@ -42,67 +42,37 @@ window.PORTFOLIO_DATA = {
 
     projects: [
     {
-      id: "fullstack-saas-app",
-      title: "Full-Stack SaaS Platform",
+      id: "toolstudio",
+      title: "ToolStudio — 40+ Advanced Web Tools Suite",
       category: "web",
       image: "",
-      shortDesc: "A modern, high-performance web application built with React, Node.js, and SQL. Currently under active development.",
-      tags: ["Full-Stack", "React.js", "Node.js", "SQL", "Coming Soon"],
-      liveUrl: "",
-      githubUrl: "",
-      svgBanner: "🚀 Full-Stack SaaS Platform — Coming Soon",
-      gradient: "linear-gradient(135deg, #1e293b, #0f172a)",
-      isComingSoon: true,
-      fullDesc: "This flagship Full-Stack SaaS Application is currently under active development. It features a modern responsive UI, secure user authentication, REST APIs, and database integration.",
-      features: [
-        "🚧 Active Development: Architecture & API Endpoints in progress",
-        "⚡ High-Performance React.js Frontend UI with Tailwind & Glassmorphism",
-        "🔐 Secure REST API Backend with Node.js & Express",
-        "💾 Scalable Relational Database Schema Design (MySQL / PostgreSQL)"
+      shortDesc: "A high-performance, privacy-first web application featuring 40+ instant browser tools for developers, designers, and creators. 0ms server latency with 100% client-side execution.",
+      tags: ["JavaScript (ES6+)", "HTML5 & Vanilla CSS3", "Canvas API", "Web Crypto API", "Service Worker (PWA)", "40+ Tools"],
+      liveUrl: "https://toolstudio.vercel.app",
+      githubUrl: "https://github.com/adityasaxenaengr/toolstudio",
+      svgBanner: "⚡ ToolStudio — 40+ Instant Browser Tools Suite",
+      gradient: "linear-gradient(135deg, #0f172a, #131d31)",
+      isComingSoon: false,
+      fullDesc: "ToolStudio is an ultra-fast, production-ready suite of 40 client-side studio tools organized across 8 category hubs (CSS & Effects, Layout & Typography, Code Formatters & Minifiers, Developer Debugging, Text & SEO Analytics, Content & Documents, Media & Graphics, and Security & Data). Built purely with Vanilla JavaScript, HTML5, and CSS3 without heavy external framework overhead.",
+      skillsUsed: [
+        "JavaScript (ES6+) - State Management & Dynamic DOM Engines",
+        "HTML5 & Vanilla CSS3 - Custom Design System & Responsive Layouts",
+        "HTML5 Canvas API - Client-Side Image Resizer & Barcode Engine",
+        "Web Crypto & Math API - Password & UUID v4 Generators",
+        "Service Worker (PWA) - Offline Cache & App Installation",
+        "Client-Side File Processing - .min.js, .sql, .html, .xml, .md, .csv Exports"
       ],
-      architectureNotes: "Project is under active development. Live demonstration URL and GitHub repository link will be published upon official v1.0 release."
-    },
-    {
-      id: "ai-automation-tool",
-      title: "Python AI & Automation Suite",
-      category: "python",
-      image: "",
-      shortDesc: "Automated data processing, web scraping, and API integration suite built with Python. Under active development.",
-      tags: ["Python 3", "Automation", "REST APIs", "Coming Soon"],
-      liveUrl: "",
-      githubUrl: "",
-      svgBanner: "🐍 Python Automation Suite — Coming Soon",
-      gradient: "linear-gradient(135deg, #1e293b, #0f172a)",
-      isComingSoon: true,
-      fullDesc: "A modular Python automation tool engineered for automated data extraction, API workflows, and system utilities.",
       features: [
-        "🚧 Active Development: Core modules and scripting pipeline in progress",
-        "⚡ Automated Data Extraction & Multi-threaded Scraping Utilities",
-        "🔄 Async API Workflows & File Processing Engines",
-        "📊 High-Efficiency Data Cleaning & Analytics Pipeline"
+        "⚡ 40 High-Level Studio Tools organized across 8 dedicated Category Hubs",
+        "🔒 100% Private Client-Side Processing: Zero server latency & 0 external API dependencies",
+        "📄 Live Code Formatters & AST Comment Strippers with Instant File Downloads (.min.js, .sql, .html, .xml, .md, .csv)",
+        "🎨 Visual CSS Gradient, Glassmorphism, Box Shadow & Aspect Ratio Canvas Generators",
+        "🔑 JWT Decoder with Live Expiration Status, Base64 Studio & Regex Tester",
+        "🤖 Robots.txt, .htaccess & Social Open Graph Meta Tag Generators",
+        "📱 Progressive Web App (PWA): Installable on desktop & mobile with offline Service Worker support",
+        "🌓 Dual Glassmorphism Dark & Light Modes with fluid responsive design"
       ],
-      architectureNotes: "Project is under active development. Source code and documentation will be released on GitHub soon."
-    },
-    {
-      id: "java-enterprise-app",
-      title: "Java OOP Enterprise System",
-      category: "java",
-      image: "",
-      shortDesc: "Object-oriented desktop and backend application built with Java and clean architectural design patterns. Under active development.",
-      tags: ["Java", "OOP", "Design Patterns", "Coming Soon"],
-      liveUrl: "",
-      githubUrl: "",
-      svgBanner: "☕ Java Enterprise System — Coming Soon",
-      gradient: "linear-gradient(135deg, #1e293b, #0f172a)",
-      isComingSoon: true,
-      fullDesc: "A robust Java backend application demonstrating Object-Oriented Programming (OOP) principles, clean architecture, and data structures.",
-      features: [
-        "🚧 Active Development: Class hierarchy and core business logic in progress",
-        "☕ Object-Oriented Architecture (Encapsulation, Inheritance, Polymorphism)",
-        "⚙️ Robust Exception Handling & Logging Pipeline",
-        "📂 File Systems & Data Collection Processing"
-      ],
-      architectureNotes: "Project is under active development. Full documentation and GitHub repository link will be available upon completion."
+      architectureNotes: "Engineered from scratch using pure Vanilla JavaScript ES6+, Vanilla CSS3 custom tokens, and Service Worker offline caching. Designed for ultra-fast load times, zero server round-trips, and maximum developer productivity."
     }
   ],
 
