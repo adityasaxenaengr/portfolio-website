@@ -1,7 +1,3 @@
-/**
- * STATS COUNTER ENGINE
- * Smooth number counting animation upon scroll
- */
 
 (function () {
   function animateValue(obj, start, end, duration) {
@@ -45,7 +41,7 @@
       entries.forEach(entry => {
         if (entry.isIntersecting && !animated) {
           animated = true;
-          
+
           const yEl = document.getElementById('statYears');
           const pEl = document.getElementById('statProjects');
           const aEl = document.getElementById('statAwards');

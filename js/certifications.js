@@ -1,7 +1,3 @@
-/**
- * CERTIFICATIONS SECTION & AUTHENTIC MODAL VIEWER COMPONENT
- * Renders verified certification cards and realistic certificate document modal
- */
 
 (function () {
   function renderCertifications() {
@@ -40,7 +36,6 @@
       window.lucide.createIcons();
     }
 
-        // Add Click Listeners to open Certificate Modal (Only for non-Coming Soon verified certs)
     document.querySelectorAll('.cert-card').forEach(card => {
       card.addEventListener('click', () => {
         const id = card.getAttribute('data-cert-id');
@@ -49,7 +44,7 @@
           if (window.showToast) {
             window.showToast('Certificate verification in progress. Real document will be available soon.', 'info');
           }
-          return; // Do NOT open modal for Coming Soon cards!
+          return;
         }
         openCertificateModal(id);
       });
@@ -83,7 +78,7 @@
           <div class="cert-recipient-name">ADITYA SAXENA</div>
 
           <p class="cert-official-statement">
-            For successfully completing and demonstrating exceptional skill, competence, and algorithmic mastery in 
+            For successfully completing and demonstrating exceptional skill, competence, and algorithmic mastery in
             <strong>${cert.title}</strong>.
           </p>
 
@@ -139,7 +134,6 @@
       window.playAudioEffect('open');
     }
 
-    // Print Button Action (Dedicated Print View)
     document.getElementById('printCertBtn')?.addEventListener('click', () => {
       const certContainer = document.querySelector('.official-certificate-container') || document.getElementById('certModalBody');
       const certHtml = certContainer.outerHTML;
@@ -169,7 +163,6 @@
       printWin.document.close();
     });
 
-    // Download Button Action (PDF format: aditya's_[title]_certificate.pdf)
     document.getElementById('downloadCertBtn')?.addEventListener('click', () => {
       const certContainer = document.querySelector('.official-certificate-container') || document.getElementById('certModalBody');
       const cleanTitle = cert.title.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');

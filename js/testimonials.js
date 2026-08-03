@@ -1,7 +1,3 @@
-/**
- * TESTIMONIALS CAROUSEL ENGINE — ADITYA SAXENA
- * Render clean recommendation slides with quote icons (Without avatar photos)
- */
 
 (function () {
   let currentIndex = 0;

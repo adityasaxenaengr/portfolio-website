@@ -1,7 +1,3 @@
-/**
- * TERMINAL CLI ENGINE
- * Easter-egg interactive hacker terminal modal
- */
 
 (function () {
   let outputHistory = [];

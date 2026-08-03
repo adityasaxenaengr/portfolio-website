@@ -1,13 +1,3 @@
-/**
- * TYPING EFFECT ENGINE (CHOSEN SENIOR LINES - SINGLE LINE GUARANTEED)
- * Smooth typewriter animation using exact user-selected lines:
- * 1. Full-Stack Engineer.
- * 2. Java & Python Tech.
- * 3. High-Performance Code.
- * 4. Modern Web Design.
- * 5. Java & Full-Stack.
- * 6. Python & Web Engineering.
- */
 
 (function () {
   function initTyping() {
@@ -41,7 +31,7 @@
       let speed = isDeleting ? 35 : 70;
 
       if (!isDeleting && charIndex === currentTitle.length) {
-        speed = 2200; // Pause at full word
+        speed = 2200;
         isDeleting = true;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;

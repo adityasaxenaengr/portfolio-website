@@ -1,15 +1,10 @@
-/**
- * DIRECT INBOX MAIL ENGINE — ADITYA SAXENA
- * Powered by Web3Forms Access Key
- */
 
 (function () {
   const TARGET_EMAIL = 'adityasaxena.engr@gmail.com';
   const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
-  // Official Web3Forms Access Key for Aditya Saxena
+
   const WEB3FORMS_ACCESS_KEY = '8be9e996-fb93-47ae-97ee-a911104345c9';
 
-  // Toast Notification Launcher
   window.showToast = function (message, type = 'success') {
     const container = document.getElementById('toastContainer');
     if (!container) return;
@@ -31,7 +26,6 @@
     }, 5000);
   };
 
-  // Canvas Confetti Celebration Synthesis
   function triggerConfetti() {
     const canvas = document.createElement('canvas');
     canvas.style.position = 'fixed';
@@ -112,7 +106,6 @@
       const emailErr = document.getElementById('emailError');
       const msgErr = document.getElementById('messageError');
 
-      // Clear previous errors
       if (nameErr) nameErr.textContent = '';
       if (emailErr) emailErr.textContent = '';
       if (msgErr) msgErr.textContent = '';
@@ -140,7 +133,7 @@
       }
 
       if (isValid) {
-        // Change button state to sending
+
         if (submitBtn) {
           submitBtn.disabled = true;
           submitBtn.innerHTML = `<span>Sending Message...</span> <i data-lucide="loader-2" class="spin-icon"></i>`;
@@ -148,7 +141,7 @@
         }
 
         try {
-          // Direct background email delivery via Web3Forms API
+
           const response = await fetch(WEB3FORMS_ENDPOINT, {
             method: 'POST',
             headers: {
@@ -194,7 +187,6 @@
       }
     });
 
-    // Copy to Clipboard Action Buttons
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const textToCopy = btn.getAttribute('data-copy');
@@ -207,7 +199,6 @@
       });
     });
 
-    // Hero Email Social Icon Click Toast Trigger
     const heroEmailBtn = document.getElementById('heroEmailBtn');
     if (heroEmailBtn) {
       heroEmailBtn.addEventListener('click', () => {

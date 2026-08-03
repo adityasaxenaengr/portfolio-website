@@ -1,7 +1,3 @@
-/**
- * CURSOR FOLLOWER ENGINE — ADITYA SAXENA
- * Smooth interactive glowing cursor ring & dot follower
- */
 
 (function () {
   'use strict';
@@ -12,7 +8,6 @@
 
     if (!dot || !outline) return;
 
-    // Indicate JS readiness for custom cursor styling
     document.body.classList.add('js-ready');
 
     let mouseX = 0;
@@ -36,7 +31,7 @@
     });
 
     function animateOutline() {
-      // Ultra-smooth interpolation (lerp)
+
       outlineX += (mouseX - outlineX) * 0.18;
       outlineY += (mouseY - outlineY) * 0.18;
 
@@ -48,9 +43,8 @@
 
     animateOutline();
 
-    // Hover detection on interactive elements
     const hoverSelectors = 'a, button, input, textarea, label, .btn, .glass-card, .project-card, .skill-card, .filter-tab, .social-btn';
-    
+
     document.addEventListener('mouseover', (e) => {
       if (e.target.closest(hoverSelectors)) {
         document.body.classList.add('cursor-hover');

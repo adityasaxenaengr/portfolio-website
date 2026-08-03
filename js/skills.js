@@ -1,7 +1,3 @@
-/**
- * CLEAN SKILLS ENGINE — ADITYA SAXENA
- * Renders sleek skill badges with technology icons and descriptions (Without percentage bars)
- */
 
 (function () {
   let currentCategory = 'all';
@@ -51,7 +47,6 @@
   function initSkills() {
     renderSkills();
 
-    // Category Filter Tabs
     const filterTabs = document.getElementById('skillsFilterTabs');
     if (filterTabs) {
       filterTabs.addEventListener('click', (e) => {
@@ -67,7 +62,6 @@
       });
     }
 
-    // Search Input
     const searchInput = document.getElementById('skillsSearchInput');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {

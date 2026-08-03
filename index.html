@@ -7,31 +7,25 @@
   <meta name="description" content="Personal Portfolio Website of Aditya Saxena featuring web applications, Python tools, and Java software projects.">
   <meta name="keywords" content="Aditya Saxena, Developer Portfolio, Web Development, Python, Java, B.Tech CSE">
   <meta name="author" content="Aditya Saxena">
-  
-  <!-- Open Graph / Social Media -->
+
   <meta property="og:title" content="Aditya Saxena . Portfolio">
   <meta property="og:description" content="Building scalable web platforms, modern user experiences, and intelligent AI solutions.">
   <meta property="og:type" content="website">
-  
-  <!-- Google Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Lucide Icons -->
+
   <script src="https://unpkg.com/lucide@latest"></script>
-  
-  <!-- Stylesheets -->
+
   <link rel="stylesheet" href="css/styles.css?v=TimelineCenterAligned">
 </head>
 <body>
-  <!-- Scroll Progress Bar -->
+
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Initial Preloader Screen -->
   <div class="page-loader" id="pageLoader">
     <div class="loader-content">
       <div class="loader-spinner"></div>
@@ -39,17 +33,14 @@
     </div>
   </div>
 
-  <!-- Ambient Background Glow & Grid -->
   <div class="ambient-glow glow-1"></div>
   <div class="ambient-glow glow-2"></div>
   <div class="ambient-glow glow-3"></div>
   <div class="bg-grid-overlay"></div>
-  
-  <!-- Custom Cursor Follower -->
+
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-outline" id="cursorOutline"></div>
 
-  <!-- Header / Navigation -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
@@ -57,7 +48,7 @@
         <span class="logo-text">Aditya.Dev</span>
         <span class="logo-bracket">/&gt;</span>
       </a>
-      
+
       <nav class="nav-menu" id="navMenu">
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
@@ -75,7 +66,7 @@
         <button class="icon-btn" id="resumeToggleBtn" title="View Resume" aria-label="View Resume">
           <i data-lucide="file-text"></i>
         </button>
-        
+
         <button class="icon-btn" id="soundToggleBtn" title="Toggle Sound SFX" aria-label="Toggle Sound">
           <i data-lucide="volume-2" id="soundIcon"></i>
         </button>
@@ -92,7 +83,7 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+
     <section class="hero-section" id="hero">
       <div class="hero-particles" id="heroParticles"></div>
       <div class="hero-container">
@@ -121,7 +112,7 @@
               <span>View My Work</span>
               <i data-lucide="arrow-right"></i>
             </a>
-            
+
             <a href="#contact" class="btn btn-secondary">
               <i data-lucide="mail"></i>
               <span>Get In Touch</span>
@@ -196,7 +187,6 @@
         </div>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section class="section about-section" id="about">
       <div class="section-container">
         <div class="section-header">
@@ -281,7 +271,6 @@
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
     <section class="section skills-section" id="skills">
       <div class="section-container">
         <div class="section-header">
@@ -290,7 +279,6 @@
           <div class="section-title-line"></div>
         </div>
 
-        <!-- Skills Filter Controls -->
         <div class="filter-bar">
           <div class="filter-tabs" id="skillsFilterTabs">
             <button class="filter-tab active" data-category="all">All Skills</button>
@@ -307,12 +295,11 @@
         </div>
 
         <div class="skills-grid" id="skillsGrid">
-          <!-- Populated dynamically via skills.js -->
+
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section class="section projects-section" id="projects">
       <div class="section-container">
         <div class="section-header">
@@ -321,7 +308,6 @@
           <div class="section-title-line"></div>
         </div>
 
-        <!-- Project Category Filters & Search -->
         <div class="filter-bar">
           <div class="filter-tabs" id="projectsFilterTabs">
             <button class="filter-tab active" data-category="all">All Projects</button>
@@ -337,12 +323,11 @@
         </div>
 
         <div class="projects-grid" id="projectsGrid">
-          <!-- Populated dynamically via projects.js -->
+
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
     <section class="section experience-section" id="experience">
       <div class="section-container">
         <div class="section-header">
@@ -352,12 +337,11 @@
         </div>
 
         <div class="timeline" id="experienceTimeline">
-          <!-- Populated dynamically via main.js -->
+
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS SECTION -->
     <section class="section certifications-section" id="certifications">
       <div class="section-container">
         <div class="section-header">
@@ -367,12 +351,11 @@
         </div>
 
         <div class="certifications-grid" id="certificationsGrid">
-          <!-- Populated dynamically via certifications.js -->
+
         </div>
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section class="section contact-section" id="contact">
       <div class="section-container">
         <div class="section-header">
@@ -400,7 +383,6 @@
                 </button>
               </div>
 
-
               <div class="contact-item">
                 <div class="contact-icon-wrapper">
                   <i data-lucide="map-pin"></i>
@@ -423,7 +405,7 @@
 
           <form class="contact-form glass-card" id="contactForm" novalidate>
             <h3 class="form-title">Send a Message</h3>
-            
+
             <div class="form-group">
               <label for="senderName">Your Name <span class="req">*</span></label>
               <input type="text" id="senderName" name="name" placeholder="John Doe" required>
@@ -457,7 +439,6 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
@@ -485,9 +466,6 @@
     </div>
   </footer>
 
-  <!-- MODALS -->
-
-  <!-- Project Detail Modal -->
   <div class="modal modal-backdrop" id="projectModalBackdrop">
     <div class="modal-content glass-card" id="projectModal">
       <button class="modal-close-btn" id="closeProjectModalBtn" aria-label="Close modal">
@@ -495,12 +473,11 @@
       </button>
 
       <div class="modal-body" id="projectModalBody">
-        <!-- Content inserted dynamically -->
+
       </div>
     </div>
   </div>
 
-  <!-- Terminal CLI Modal -->
   <div class="modal modal-backdrop" id="terminalModalBackdrop">
     <div class="terminal-container glass-card" id="terminalModal">
       <div class="terminal-header">
@@ -526,7 +503,6 @@
     </div>
   </div>
 
-  <!-- Resume Modal -->
   <div class="modal modal-backdrop" id="resumeModalBackdrop">
     <div class="modal-content glass-card resume-modal-content" id="resumeModal">
       <div class="resume-modal-header">
@@ -547,12 +523,11 @@
       </div>
 
       <div class="resume-modal-body" id="resumeModalBody">
-        <!-- Rendered dynamically -->
+
       </div>
     </div>
   </div>
 
-  <!-- CERTIFICATE VIEWER MODAL -->
   <div class="modal" id="certificateModal" aria-hidden="true">
     <div class="modal-backdrop" id="certModalBackdrop"></div>
     <div class="modal-content cert-modal-content">
@@ -560,15 +535,13 @@
         <i data-lucide="x"></i>
       </button>
       <div id="certModalBody">
-        <!-- Rendered dynamically via certifications.js -->
+
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification System -->
   <div class="toast-container" id="toastContainer"></div>
 
-  <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/cursor.js"></script>

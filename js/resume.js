@@ -1,7 +1,3 @@
-/**
- * RESUME MODAL ENGINE — ADITYA SAXENA
- * Built-in curriculum vitae document renderer
- */
 
 (function () {
   function renderResumeContent() {

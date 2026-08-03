@@ -1,7 +1,3 @@
-/**
- * MAIN PORTFOLIO APPLICATION CONTROLLER
- * Initializes components, audio synthesis engine, navigation, and experience timeline
- */
 
 (function () {
   let isSoundEnabled = true;
@@ -9,7 +5,6 @@
     get soundEnabled() { return isSoundEnabled; }
   };
 
-  // Synthesize UI sound effects via Web Audio API
   window.playAudioEffect = function (type) {
     if (!isSoundEnabled) return;
     try {
@@ -51,20 +46,19 @@
         osc.start();
         osc.stop(ctx.currentTime + 0.1);
       } else if (type === 'success') {
-        osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
-        osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.08); // E5
-        osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.16); // G5
+        osc.frequency.setValueAtTime(523.25, ctx.currentTime);
+        osc.frequency.setValueAtTime(659.25, ctx.currentTime + 0.08);
+        osc.frequency.setValueAtTime(783.99, ctx.currentTime + 0.16);
         gain.gain.setValueAtTime(0.1, ctx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
         osc.start();
         osc.stop(ctx.currentTime + 0.25);
       }
     } catch (e) {
-      // AudioContext muted or blocked
+
     }
   };
 
-  // Render Experience Timeline
   function renderExperienceTimeline() {
     const container = document.getElementById('experienceTimeline');
     if (!container || !window.PORTFOLIO_DATA) return;
@@ -87,7 +81,6 @@
     `).join('');
   }
 
-  // Scroll Navigation Active State & Progress Bar
   function initScrollProgress() {
     const progressBar = document.getElementById('scrollProgress');
     const sections = document.querySelectorAll('section[id]');
@@ -107,7 +100,6 @@
       const progress = (window.scrollY / totalHeight) * 100;
       if (progressBar) progressBar.style.width = `${progress}%`;
 
-      // Update active nav link
       let currentSection = '';
       sections.forEach(section => {
         const top = section.offsetTop - 120;
@@ -126,7 +118,6 @@
     });
   }
 
-  // Mobile Drawer Menu Toggle
   function initMobileMenu() {
     const menuBtn = document.getElementById('mobileMenuBtn');
     const navMenu = document.getElementById('navMenu');
@@ -143,7 +134,6 @@
       if (window.playAudioEffect) window.playAudioEffect('click');
     });
 
-    // Close menu when link clicked
     navMenu.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
@@ -156,7 +146,6 @@
     });
   }
 
-  // Sound Toggle Engine
   function initSoundToggle() {
     const btn = document.getElementById('soundToggleBtn');
     const icon = document.getElementById('soundIcon');
@@ -172,9 +161,8 @@
     });
   }
 
-  // Initialize App
   document.addEventListener('DOMContentLoaded', () => {
-    // Current Year Update
+
     const yearEl = document.getElementById('currentYear');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -183,7 +171,6 @@
     initMobileMenu();
     initSoundToggle();
 
-    // Lucide Icons Render
     if (window.lucide) {
       window.lucide.createIcons();
     }

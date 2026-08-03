@@ -1,6 +1,3 @@
-/**
- * CENTRALIZED PORTFOLIO DATASET — ADITYA SAXENA
- */
 
 window.PORTFOLIO_DATA = {
   profile: {
@@ -30,17 +27,15 @@ window.PORTFOLIO_DATA = {
   ],
 
   skills: [
-    // Web Development & Full-Stack
+
     { name: "HTML5 & CSS3", level: 90, category: "frontend", icon: "code", desc: "Responsive Design, Flexbox, CSS Grid, Glassmorphism" },
     { name: "JavaScript (ES6+)", level: 85, category: "frontend", icon: "file-code", desc: "DOM Manipulation, ES6+, Async/Await, Fetch API" },
     { name: "React.js", level: 80, category: "frontend", icon: "layers", desc: "Reusable Components, Hooks, State Management" },
     { name: "Node.js & Express", level: 75, category: "backend", icon: "server", desc: "RESTful APIs, Middleware, Server Routing" },
 
-    // Programming Languages
     { name: "Python", level: 85, category: "backend", icon: "terminal", desc: "OOP, Automation Scripts, Logic & Data Structures" },
     { name: "Java", level: 80, category: "backend", icon: "coffee", desc: "Object-Oriented Programming (OOP), Core Java, Algorithms" },
 
-    // Databases & Tools
     { name: "SQL & Databases", level: 75, category: "backend", icon: "database", desc: "MySQL, Relational Database Design, SQL Queries" },
     { name: "Git & GitHub", level: 85, category: "devops", icon: "git-branch", desc: "Version Control, Repository Management, Open Source" }
   ],

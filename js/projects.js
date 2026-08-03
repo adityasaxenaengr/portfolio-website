@@ -1,7 +1,3 @@
-/**
- * PROJECTS ENGINE
- * Dynamic project card filtering, search, and modal triggers
- */
 
 (function () {
   let activeCategory = 'all';
@@ -60,7 +56,6 @@
 
     if (window.lucide) window.lucide.createIcons();
 
-    // Attach modal trigger click events
     grid.querySelectorAll('.open-modal-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -75,7 +70,6 @@
   function initProjects() {
     renderProjects();
 
-    // Filter Tabs
     const filterTabs = document.getElementById('projectsFilterTabs');
     if (filterTabs) {
       filterTabs.addEventListener('click', (e) => {
@@ -91,7 +85,6 @@
       });
     }
 
-    // Search Input
     const searchInput = document.getElementById('projectsSearchInput');
     if (searchInput) {
       searchInput.addEventListener('input', (e) => {

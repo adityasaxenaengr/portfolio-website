@@ -1,7 +1,3 @@
-/**
- * PROJECT DETAIL MODAL ENGINE
- * Deep-dive overlay with architecture highlights, features list, and links
- */
 
 (function () {
   function openProjectModal(projectId) {

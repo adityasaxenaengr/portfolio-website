@@ -1,6 +1,3 @@
-/**
- * THEME ENGINE — Dark/Light Mode Management
- */
 
 (function () {
   const THEME_KEY = 'aditya_portfolio_theme';

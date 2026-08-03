@@ -1,17 +1,10 @@
-/**
- * HIGH-PERFORMANCE INTERACTIVE ANIMATIONS ENGINE — ADITYA SAXENA
- * Page Preloader, Scroll-Reveal, Hero Particles, Timeline Line Drawing,
- * 3D Perspective Tilt, Magnetic Buttons, and UI Audio SFX Feedback
- */
 
 (function () {
   'use strict';
 
-  /* ---------- Helper Selector ---------- */
   const $ = (id) => document.getElementById(id);
   const $$ = (sel) => document.querySelectorAll(sel);
 
-  /* ---------- Page Preloader Engine ---------- */
   function initPreloader() {
     const loader = $('pageLoader');
     if (!loader) return;
@@ -30,7 +23,6 @@
     }
   }
 
-  /* ---------- Hero Floating Particle Generator ---------- */
   function initHeroParticles() {
     const container = $('heroParticles');
     if (!container) return;
@@ -50,7 +42,6 @@
     }
   }
 
-  /* ---------- Scroll Progress & Active Nav Indicator ---------- */
   function initScrollProgressAndNav() {
     const progress = $('scrollProgress');
     const navbar = $('navbar');
@@ -91,7 +82,6 @@
     handleScroll();
   }
 
-  /* ---------- IntersectionObserver Scroll-Reveal Engine ---------- */
   function initScrollReveal() {
     const observerOptions = {
       root: null,
@@ -134,7 +124,6 @@
     });
   }
 
-  /* ---------- Timeline Progressive Line Draw Animation ---------- */
   function initTimelineDrawing() {
     const timeline = document.querySelector('.timeline');
     if (!timeline) return;
@@ -160,7 +149,6 @@
     window.addEventListener('resize', setTimelineHeight);
   }
 
-  /* ---------- Staggered Skill Badges Animation ---------- */
   function initStaggeredSkills() {
     const skillsGrid = $('skillsGrid');
     if (!skillsGrid) return;
@@ -182,7 +170,6 @@
     skillObserver.observe(skillsGrid);
   }
 
-  /* ---------- 3D Perspective Tilt on Interactive Cards ---------- */
   function init3DTiltCards() {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const cards = $$('.project-card, .glass-card, .stat-card, .profile-card');
@@ -206,7 +193,6 @@
     });
   }
 
-  /* ---------- Magnetic Button Physics ---------- */
   function initMagneticButtons() {
     const buttons = $$('.btn-primary, .btn-secondary, .btn-outline, .social-btn');
 
@@ -227,7 +213,6 @@
     });
   }
 
-  /* ---------- Interactive Audio SFX Chime Feedback ---------- */
   let audioCtx = null;
   let lastChimeTime = 0;
 
@@ -267,7 +252,7 @@
       tone.start(time);
       tone.stop(time + 0.1);
     } catch (_) {
-      // Audio optional fallback
+
     }
   }
 
@@ -281,7 +266,6 @@
     }, { passive: true });
   }
 
-  /* ---------- Master Initialization ---------- */
   document.addEventListener('DOMContentLoaded', () => {
     initPreloader();
     initHeroParticles();
